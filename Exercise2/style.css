@@ -98,7 +98,7 @@ h2::after {
 
 #underline-2::after {
     content: "";
-    border-bottom: 2px solid rgb(238, 100, 100);
+    border-bottom: 1px solid rgb(238, 100, 100);
     width: 34%;
     bottom: -60%;
     left: 33%;
