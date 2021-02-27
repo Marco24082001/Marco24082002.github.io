@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    color: white;
+}
+
+.section-1 {
+    background-image: url(./bora-bora-685303_1920.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.section-1 > div {
+    height: 300px;
+}
+
+#logo {
+    padding-top: 80px;
+}
+
+.content {
+    font-size: 2rem;
+    text-align: center;
+    width: 550px;
+}
+
+span {
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+
+
+.button {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    padding: 9px 2px;
+    border-radius: 5px;
+    width: 12vw;
+    background-color: rgb(12, 10, 10);
+}
+
+
+
+
+.section-2 {
+    text-align: center;
+    color: black;
+    padding: 60px;
+}
+.content-2 {
+    display: flex;
+  
+    justify-content: space-around;
+}
+
+.content-2 > div {
+    width: 350px;
+}
+
+.redtext {
+    color: rgb(230, 109, 109);
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    position: relative; 
+    display: inline-block;
+    text-align: center;
+}
+
+h2::after {
+    content: "";
+    border-bottom: 2px solid red;
+    width: 80%;
+    bottom: -40%;
+    left: 10%;
+    position: absolute;
+}
+
+#underline-2 {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+
+#underline-2::after {
+    content: "";
+    border-bottom: 2px solid rgb(238, 100, 100);
+    width: 34%;
+    bottom: -60%;
+    left: 33%;
+    position: absolute;
+}
