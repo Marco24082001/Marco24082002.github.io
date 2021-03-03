@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    height: 200vh;
+}
+
+.full-screen {
+    position: relative;
+    height: 100vh;
+    width: 100vh;
+}
+
+.container {
+    width: 400px;
+    height: 200px;
+    background-color: grey;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.item {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    background-color: rgb(61, 12, 83);
+    display: inline-block;
+}
+
+.container .item:nth-last-of-type(3) {
+    position: relative;
+    transition: transform 1s;
+}
+
+.container .item:nth-last-of-type(1) {
+    margin: 0px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;    
+    transition: width 2s, height 2s;
+}
+
+.container .item:nth-last-of-type(3):hover {
+    transform: translateY(130px);
+}
+
+.container .item:nth-last-of-type(1):active {
+    width: 100px;
+    height: 100px;
+}
+
+.item-rotate {
+    transition: transform 2s;
+}
+
+.btn:focus ~ .item-rotate {
+    transform: rotate(180deg);
+}
+
+
+
+
