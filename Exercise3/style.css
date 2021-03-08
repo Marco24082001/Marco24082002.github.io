@@ -53,7 +53,7 @@ body {
     transition: transform 2s;
 }
 
-.btn:focus ~ .item-rotate {
+.btn:focus + .item-rotate {
     transform: rotate(180deg);
 }
 
