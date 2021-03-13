@@ -50,29 +50,62 @@ function drawSnows() {
     }
 }
 
-function merryXmas() {
+function effect() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawSnows();
 }
 
-// var textAnimation = document.getElementById("ani-text");
-// var wText1 = 7.3, wText2 = 7.5, wText3 = 6.7; 
-// function ctrA() {
-//     var temp = textAnimation.children[0].textContent, tempw = wText1;
-//     textAnimation.children[0].innerHTML = textAnimation.children[1].textContent;
-//     textAnimation.children[1].innerHTML = textAnimation.children[2].textContent;
-//     textAnimation.children[2].innerHTML = temp;
-//     wText1 = wText2;
-//     wText2 = wText3;
-//     wText3 = tempw;
-//     textAnimation.style.width = wText1+'em';
-// }
+var textAnimation = document.getElementById("text-1");
+var text2 = " UI/UX Designer";
+var text3 = " Freelancer" ;
+function ctrA() {
+    var temp = textAnimation.textContent;
+    textAnimation.innerHTML = text2;
+    text2 = text3;
+    text3 = temp;
+}
 
 window.onload = function () {
     for (var i = 0; i < totalSnows; i++) {
         snows.push(new Snow());
     }
-    setInterval(merryXmas, 40);
-    // setInterval(ctrA, 4600); 
+    setInterval(effect, 40);
+    setTimeout(() => {  ctrA();
+                        setInterval(ctrA, 2400);},1200); 
 }
 
+
+//hidden section
+document.getElementById("about-me").addEventListener("click", nextSection1);
+document.getElementById("home").addEventListener("click", nextSection2);
+document.getElementById("contact").addEventListener("click", nextSection3);
+document.getElementById("resume").addEventListener("click", nextSection4);
+
+
+function nextSection1() {
+    document.getElementById("page-about-me").style.display = "unset";
+    document.getElementById("page-home").style.display = "none";
+    document.getElementById("page-contact").style.display = "none";
+    document.getElementById("page-resume").style.display = "none";
+}
+
+function nextSection2() {
+    document.getElementById("page-about-me").style.display = "none";
+    document.getElementById("page-home").style.display = "unset";
+    document.getElementById("page-contact").style.display = "none";
+    document.getElementById("page-resume").style.display = "none";
+}
+
+function nextSection3() {
+    document.getElementById("page-about-me").style.display = "none";
+    document.getElementById("page-home").style.display = "none";
+    document.getElementById("page-contact").style.display = "unset";
+    document.getElementById("page-resume").style.display = "none";
+}
+
+function nextSection4() {
+    document.getElementById("page-about-me").style.display = "none";
+    document.getElementById("page-home").style.display = "none";
+    document.getElementById("page-contact").style.display = "none";
+    document.getElementById("page-resume").style.display = "unset";
+}

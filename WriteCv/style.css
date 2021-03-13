@@ -152,14 +152,19 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0px;
     white-space: nowrap;
     overflow: hidden;
-    animation: type 1.3s steps(14, end); 
-    width: 7.3em;
+    animation: type 1.2s steps(14, start); 
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
 
+#text-2, #text-3{
+    display: none;
+}
+
 @keyframes type{ 
-    from { width: 0px;} 
+    0%{max-width:100%;}
+    20%{max-width:100%;}
+    100% { max-width: 0px; } 
 } 
 
 
@@ -178,4 +183,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .personal-information b{
     border-bottom: 2px solid #00A3E1;       
+}
+
+/* hiden section */
+.resume, .contact, .about-me {
+    display: none;
 }
