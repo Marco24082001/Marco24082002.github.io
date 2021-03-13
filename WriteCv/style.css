@@ -31,7 +31,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer {
     position: absolute;
-
     bottom: 0px;
 }
 
@@ -150,15 +149,12 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-block;
     margin: 0px;
     padding: 0px;
+    border-bottom: 2px solid #ffffff;
     white-space: nowrap;
     overflow: hidden;
     animation: type 1.2s steps(14, start); 
     animation-iteration-count: infinite;
     animation-direction: alternate;
-}
-
-#text-2, #text-3{
-    display: none;
 }
 
 @keyframes type{ 

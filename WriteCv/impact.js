@@ -69,9 +69,9 @@ window.onload = function () {
     for (var i = 0; i < totalSnows; i++) {
         snows.push(new Snow());
     }
-    setInterval(effect, 40);
     setTimeout(() => {  ctrA();
                         setInterval(ctrA, 2400);},1200); 
+    setInterval(effect, 40);
 }
 
 
@@ -83,7 +83,7 @@ document.getElementById("resume").addEventListener("click", nextSection4);
 
 
 function nextSection1() {
-    document.getElementById("page-about-me").style.display = "unset";
+    document.getElementById("page-about-me").style.display = "block";
     document.getElementById("page-home").style.display = "none";
     document.getElementById("page-contact").style.display = "none";
     document.getElementById("page-resume").style.display = "none";
@@ -91,7 +91,7 @@ function nextSection1() {
 
 function nextSection2() {
     document.getElementById("page-about-me").style.display = "none";
-    document.getElementById("page-home").style.display = "unset";
+    document.getElementById("page-home").style.display = "block";
     document.getElementById("page-contact").style.display = "none";
     document.getElementById("page-resume").style.display = "none";
 }
@@ -99,7 +99,7 @@ function nextSection2() {
 function nextSection3() {
     document.getElementById("page-about-me").style.display = "none";
     document.getElementById("page-home").style.display = "none";
-    document.getElementById("page-contact").style.display = "unset";
+    document.getElementById("page-contact").style.display = "block";
     document.getElementById("page-resume").style.display = "none";
 }
 
@@ -107,5 +107,5 @@ function nextSection4() {
     document.getElementById("page-about-me").style.display = "none";
     document.getElementById("page-home").style.display = "none";
     document.getElementById("page-contact").style.display = "none";
-    document.getElementById("page-resume").style.display = "unset";
+    document.getElementById("page-resume").style.display = "block";
 }
