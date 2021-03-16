@@ -58,6 +58,7 @@ function effect() {
 var textAnimation = document.getElementById("text-1");
 var text2 = " UI/UX Designer";
 var text3 = " Freelancer" ;
+
 function ctrA() {
     var temp = textAnimation.textContent;
     textAnimation.innerHTML = text2;

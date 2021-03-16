@@ -1,19 +1,27 @@
 /* Import */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&display=swap');
-
-* {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    color: white;
 }
 
 html {
     scroll-behavior: smooth;
+    font-family: sans-serif;
 }
 
 body {
-    background-color: blanchedalmond;  
+    background-color: rgb(44, 45, 47);  
+    text-align: left;
+}
+
+/* hiden section */
+.resume, .contact, .about-me {
+    display: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -37,13 +45,11 @@ h1, h2, h3, h4, h5, h6 {
 .site-main {
     display: flex;
     flex-direction: column;
+    margin-left: 200px;
 }
 
 .page {
-    padding: 100px;
-    margin-left: 200px;
     height: 100vh;
-    background-color: white ;
 }
 
 .img-container {
@@ -165,9 +171,22 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* design about me section */
+
+.topic {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-user::before {
+    color:rgb(3, 156, 214);
+}
+
 .information {
     display: flex;
+    font-family: "Playfair Display", serif;
+    margin-top: 50px;
 }
+
 
 .personal-information {
     flex: calc(100%/3);
@@ -175,13 +194,50 @@ h1, h2, h3, h4, h5, h6 {
 
 .introduce {
     flex: calc(100% - 100%/3);
+} 
+
+.about {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
 }
 
-.personal-information b{
-    border-bottom: 2px solid #00A3E1;       
+.about-me {
+    padding: 50px 10%;
 }
 
-/* hiden section */
-.resume, .contact, .about-me {
-    display: none;
+.about p {
+    margin-bottom: 25px;
+    line-height: 25px;
 }
+
+.personal-information ul li{
+    list-style-type: none;
+    margin: 0 0 10px;
+}
+
+.about h3 {
+    margin: 0 0 20px;
+    font-size: 22px;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    color: white;
+    position: relative;
+    border-bottom: 2px solid #00A3E1;
+    display: inline-block;
+    margin-bottom: 2px;
+    margin-right: 12px;
+}
+
+.title::after {
+    content: ":";
+    position: absolute;
+    right: -10px;
+}
+
+
+
+
