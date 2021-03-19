@@ -110,3 +110,25 @@ function nextSection4() {
     document.getElementById("page-contact").style.display = "none";
     document.getElementById("page-resume").style.display = "block";
 }
+
+//set scrollbar visible when srolling
+var scrolling = false;
+var styleElement = document.createElement("style");
+
+
+window.onscroll = function(e) {
+    scrolling = true;
+}
+
+setInterval(() => {
+    if(scrolling){
+        styleElement.appendChild(document.createTextNode("::-webkit-scrollbar-thumb {background: black;}"));
+        document.getElementsByTagName("head")[0].appendChild(styleElement);
+        scrolling = false;
+    }
+    else{
+        styleElement.appendChild(document.createTextNode("::-webkit-scrollbar-thumb {background: transparent;}"));
+        document.getElementsByTagName("head")[0].appendChild(styleElement);
+    }
+}, 100);
+
