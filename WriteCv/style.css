@@ -36,6 +36,13 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: "Playfair Display", serif;
 }
+
+/* set proporty icon */
+.lnr::before {
+    font-size: 38px;
+    color: #00A3E1;
+}
+
 /* design menu */
 .header {
     background-color: rgb(23, 24, 27);
@@ -58,18 +65,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .page {
-    height: 100vh;
+    padding: 50px 11%;
+    height: fit-content;
+    position: relative;
+}
+
+img {
+    vertical-align: bottom;
 }
 
 .img-container {
     position: relative;
-    height: 150px;
 }
 
 
 .img-container img {
     width: 100%;
-
 }
 
 .img-container h1 {
@@ -116,9 +127,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* design home section */
-.page{
-    position: relative;
-}
 
 .home{
     background-image: linear-gradient(to right,rgb(120, 120, 121) 0%,rgb(86, 194, 236) 100%),url(./bora-bora-685303_1920.jpg);
@@ -128,6 +136,7 @@ h1, h2, h3, h4, h5, h6 {
     /*  another background*/
     background-blend-mode: multiply;
     padding: 0;
+    height: 100vh;
 }
 
 .home-content {
@@ -181,11 +190,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* design about me section */
 
-.about-me {
-    padding: 50px 11%;
-    height: fit-content;
-}
-
 .about p {
     margin-bottom: 25px;
     line-height: 25px;
@@ -207,11 +211,6 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
     position: relative;
     display: inline-block;
-    color: #00A3E1;
-}
-
-.lnr-user::before {
-    font-size: 38px;
     color: #00A3E1;
 }
 
@@ -238,7 +237,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-.personal-information ul li{
+ul li{
     list-style-type: none;
     margin: 0 0 12px;
 }
@@ -273,16 +272,40 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     cursor: pointer;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 100%;
     letter-spacing: 1px;
     display: inline-block;
     position: relative;
     top: 10px;
+    transition: all .3s ease;
+}
+
+.btn-about::after {
+    content: "";
+    position: absolute;
+    height: 101%;
+    bottom: 0%;
+    width: 30%;
+    background: #00A3E1 ;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.btn-about:hover:after, .btn-about:focus:after {
+    width: 101%;
+    z-index: -1;
+    opacity: 1;
+}
+
+.btn-about:hover, .btn-about:focus {
+    color: black;
+    z-index: 1;
 }
 
 .subheading {
-    position: relative;
     text-align: center;
 }
 
@@ -404,3 +427,101 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 10px;
 }
 
+/* set resume-page */
+.exp-edu {
+    display: flex;
+    gap: 25px;
+}
+
+.experience {
+    flex: 50%;
+}
+
+.education {
+    flex: 50%;
+}
+
+.experience ul, .education ul {
+    margin: 0 0 50px;
+    padding: 0 0 0 50px;
+}
+
+.experience ul li, .education ul li
+{
+    margin: 0 0 0 10px;
+    padding: 20px;
+    font-size: 16px;
+    position: relative;
+}
+
+.education ul li:not(:first-child), .experience ul li:not(:first-child) {
+    margin-top: 60px;
+}
+
+.experience .content h5, .education .content h5 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #00A3E1;
+}
+
+.line-left {
+    display: inline-block;
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background: #00A3E1;
+    left: -20px;
+    bottom: 0px;
+}
+
+.line-left::before {
+    content: "";    
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: -10px;
+    border: 2px solid #00A3E1;
+    position: absolute;
+    left: 1px;
+    transform: translateX(-50%);    
+}
+
+.line-left::after {
+    content: "";    
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    bottom: -10px;
+    border: 2px solid #00A3E1;
+    position: absolute;
+    left: 1px;
+    transform: translateX(-50%);    
+}
+
+.year {
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    left: -20px;
+    top: 0px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+}
+
+.year .to {
+    position: absolute;
+    display: inline-block;
+    top: -16px;
+    transform: translateX(-120%);
+}
+
+.year .from {
+    position: absolute;
+    display: inline-block;
+    bottom: -16px;
+    transform: translateX(-120%);
+}
