@@ -433,11 +433,7 @@ ul li{
     gap: 25px;
 }
 
-.experience {
-    flex: 50%;
-}
-
-.education {
+.experience, .education {
     flex: 50%;
 }
 
@@ -471,7 +467,7 @@ ul li{
 .line-left {
     display: inline-block;
     position: absolute;
-    width: 3px;
+    width: 2px;
     height: 100%;
     background: #00A3E1;
     left: -20px;
@@ -524,4 +520,169 @@ ul li{
     display: inline-block;
     bottom: -16px;
     transform: translateX(-120%);
+}
+
+.des-cod {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+}
+
+.design, .coding {
+    flex: 50%;
+}
+
+.des-cod h4 {
+    font-family: 16px;
+    margin: 0 0 10px;
+    font-weight: 500;
+}
+
+.des-cod span {
+    display: block;
+    height: 10px;
+}
+
+.level-bar {
+    background: rgb(64, 65, 68);
+    width: 100%;
+}
+
+.progress {
+    background: #00A3E1;
+    position: relative;
+    width: 30%;
+}
+
+.progress .progress-value {
+    position: absolute;
+    top: -25px;
+    right: 0px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    vertical-align: middle;
+}
+.progress .progress-value::after {
+    position: absolute;
+    content: "";
+    border-bottom: 22px solid rgb(0, 137, 189);
+    border-left: 17px solid transparent;
+    border-right: 17px solid transparent;
+    bottom: -25px;
+    left: 0px;
+}
+
+/* set contact-page */
+
+.input-form {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    width: 70%;
+    justify-content: space-between;
+    gap: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 50px;
+}
+
+.input {
+    flex: 50%;
+    position: relative;
+}
+
+.input-field {
+    width: 100%;
+    height: 40px;
+    border: 2px solid #999;
+    color: white;
+    padding: 5px 10px;
+    background-color: transparent;
+    outline: none;
+}
+
+.input-lable {
+    font-weight: 500;
+    font-size: 15px;
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .3s ease;
+}
+
+.input-field:focus + .input-lable, .input-field:valid + .input-lable {
+    left: 0px;
+    top: -15px;
+    font-size: 14px;
+}
+
+.input-field:focus, .input-field:valid {
+    border: 2px solid white;
+    
+}
+
+
+#message {
+    height: auto;
+    padding: 5px 10px;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+#big-lable {
+    transform: translateY(0%);
+    top: 10px;
+}
+
+.input-field:focus + #big-lable, .input-field:valid + #big-lable {
+    left: 0px;
+    top: -22px;
+    font-size: 14px;
+}
+
+.btn-contact .btn-about {
+    left: 50%;
+    transform: translateX(-50%);
+    top: -18px;
+}
+
+.contact-information {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+}
+
+.contact-information h5 {
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.contact-information h5 a{
+    color: #e1e1e1;
+}
+.gmail, .address, .phone-number {
+    flex: 1;
+}
+
+.fas::before{
+    font-size: 30px;
+    color: #00A3E1;
+}
+
+.gmail h5 {
+    display: inline-block;
+}
+
+.gmail {
+    position: relative;
+    top: -20px
 }

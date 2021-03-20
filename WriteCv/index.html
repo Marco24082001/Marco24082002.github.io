@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+    <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
     <script
       src="https://kit.fontawesome.com/bb12d3ceff.js"
       crossorigin="anonymous"
-    ></script> -->
+    ></script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
@@ -432,6 +432,86 @@
                     </ul>
                 </div>
             </div>
+            <div class="des-cod">
+                <div class="design">
+                    <div class="subheading">
+                        <h3>
+                            DESIGN SKILLS
+                        </h3>
+                    </div>
+                    <ul>
+                        <li>
+                            <h4>
+                                CORAL DRAW
+                            </h4>
+                            <span class="level-bar">
+                                <span class="progress">
+                                    <span class="progress-value">0%</span>
+                                </span>
+                            </span>
+                        </li>
+                        <li>
+                            <h4>
+                                PHOTOSHOP
+                            </h4>
+                            <span class="level-bar">
+                                <span class="progress">
+                                    <span class="progress-value">0%</span>
+                                </span>
+                            </span>
+                        </li>
+                        <li>
+                            <h4>
+                                ILLUSTRATOR
+                            </h4>
+                            <span class="level-bar">
+                                <span class="progress">
+                                    <span class="progress-value">0%</span>
+                                </span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="coding">
+                    <div class="subheading">
+                        <h3>
+                            CODING SKILLS
+                        </h3>
+                    </div>
+                    <ul>
+                        <li>
+                            <h4>
+                                HTML5
+                            </h4>
+                            <span class="level-bar">
+                                <span class="progress">
+                                    <span class="progress-value">0%</span>
+                                </span>
+                            </span>
+                        </li>
+                        <li>
+                            <h4>
+                                CSS3
+                            </h4>
+                            <span class="level-bar">
+                                <span class="progress">
+                                    <span class="progress-value">0%</span>
+                                </span>
+                            </span>
+                        </li>
+                        <li>
+                            <h4>
+                                JAVASCRIPT
+                            </h4>
+                            <span class="level-bar">
+                                <span class="progress">
+                                    <span class="progress-value">0%</span>
+                                </span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
         <section class="page contact" id="page-contact">
             <div class="topic">
@@ -439,51 +519,53 @@
                 <!-- <svg class="lnr lnr-user"><use xlink:href="#lnr-user"></use></svg> -->
                 <span class="lnr lnr-envelope"></span>
             </div>
+            <div class="subheading">
+                <h3>
+                    let's talk
+                </h3>
+            </div>
+            <div class="input-form">
+                <div class="input">
+                    <input class="input-field" id="name" type="text" required>
+                    <label class="input-lable" for="name">Name</label>
+                </div>
+                <div class="input">
+                    <input class="input-field" id="email" type="text" required>
+                    <label class="input-lable" for="email">Email</label>
+                </div>
+            </div>
+            <div class="input-form">
+                <div class="input">
+                    <textarea  class="input-field" id="message" rows="5" cols="50" required></textarea>
+                    <label class="input-lable" id="big-lable" for="message">How can i help you?</label>
+                </div>
+            </div>
+            <div class="btn-contact">
+                <a href="/#" class="btn-about">send message</a>
+            </div>
+            <div class="contact-information">
+                <div class="gmail">
+                    <span class="icon"><i class="fas fa-paper-plane"></i></span>
+                    <h5>
+                        <a href="mailto:vothanhvi.dn248@gmail.com">vothanhvi.dn248@gmail.com</a>
+                    </h5>
+                </div>
+                <div class="address">
+                    <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+                    <h5>
+                        123 Lorem Ipsum, USA
+                    </h5>
+                </div>
+                <div class="phone-number">
+                    <span class="icon"><i class="fas fa-phone"></i></span>
+                    <h5>
+                        (+1) 123 456 7890
+                    </h5>
+                </div>
+            </div>
         </section>
     </div>
     <script type="text/javascript" src="./impact.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.owl-clients').owlCarousel({
-                margin: 10,
-                loop: true,
-                autoplay: true,
-                autoplayTimeout: 2000,
-                autoplayHoverPause: true,
-                responsive: {
-                    0: {
-                        items: 2
-                    },
-                    500: {
-                        items: 3
-                    },
-                    700: {
-                        items: 4
-                    },
-                    1000: {
-                        items: 6
-                    }
-                }
-            });
-        });
-        $(document).ready(function () {
-            $('.owl-testimonials').owlCarousel({
-                margin: 40,
-                loop: true,
-                autoplay: true,
-                autoplayTimeout: 2000,
-                autoplayHoverPause: true,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    1000: {
-                        items: 2
-                    }
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>

@@ -66,16 +66,6 @@ function ctrA() {
     text3 = temp;
 }
 
-window.onload = function () {
-    for (var i = 0; i < totalSnows; i++) {
-        snows.push(new Snow());
-    }
-    setTimeout(() => {  ctrA();
-                        setInterval(ctrA, 2400);},1200); 
-    setInterval(effect, 40);
-}
-
-
 //hidden section
 document.getElementById("about-me").addEventListener("click", nextSection1);
 document.getElementById("home").addEventListener("click", nextSection2);
@@ -111,6 +101,8 @@ function nextSection4() {
     document.getElementById("page-resume").style.display = "block";
 }
 
+
+
 //set scrollbar visible when srolling
 var scrolling = false;
 var styleElement = document.createElement("style");
@@ -120,15 +112,67 @@ window.onscroll = function(e) {
     scrolling = true;
 }
 
-setInterval(() => {
-    if(scrolling){
-        styleElement.appendChild(document.createTextNode("::-webkit-scrollbar-thumb {background: black;}"));
-        document.getElementsByTagName("head")[0].appendChild(styleElement);
-        scrolling = false;
-    }
-    else{
-        styleElement.appendChild(document.createTextNode("::-webkit-scrollbar-thumb {background: transparent;}"));
-        document.getElementsByTagName("head")[0].appendChild(styleElement);
-    }
-}, 100);
+//animation progress-bar
+// var bodyRect = document.
 
+// onload
+window.onload = function () {
+    for (var i = 0; i < totalSnows; i++) {
+        snows.push(new Snow());
+    }
+    setTimeout(() => {  ctrA();
+                        setInterval(ctrA, 2400);},1200); 
+    setInterval(effect, 40);
+    setInterval(() => {
+        if(scrolling){
+            styleElement.appendChild(document.createTextNode("::-webkit-scrollbar-thumb {background: black;}"));
+            document.getElementsByTagName("head")[0].appendChild(styleElement);
+            scrolling = false;
+        }
+        else{
+            styleElement.appendChild(document.createTextNode("::-webkit-scrollbar-thumb {background: transparent;}"));
+            document.getElementsByTagName("head")[0].appendChild(styleElement);
+        }
+    }, 100);
+}
+
+$(document).ready(function () {
+    $('.owl-clients').owlCarousel({
+        margin: 10,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 2
+            },
+            500: {
+                items: 3
+            },
+            700: {
+                items: 4
+            },
+            1000: {
+                items: 6
+            }
+        }
+    });
+});
+$(document).ready(function () {
+    $('.owl-testimonials').owlCarousel({
+        margin: 40,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            1000: {
+                items: 2
+            }
+        }
+    });
+});
