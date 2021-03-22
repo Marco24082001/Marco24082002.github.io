@@ -1,3 +1,6 @@
+
+
+
 // document.getElementById("home").addEventListener("click", nextSection);
 
 // function nextSection() {
@@ -55,16 +58,8 @@ function effect() {
     drawSnows();
 }
 
-var textAnimation = document.getElementById("text-1");
-var text2 = " UI/UX Designer";
-var text3 = " Freelancer" ;
+// typejs
 
-function ctrA() {
-    var temp = textAnimation.textContent;
-    textAnimation.innerHTML = text2;
-    text2 = text3;
-    text3 = temp;
-}
 
 //hidden section
 document.getElementById("about-me").addEventListener("click", nextSection1);
@@ -120,8 +115,6 @@ window.onload = function () {
     for (var i = 0; i < totalSnows; i++) {
         snows.push(new Snow());
     }
-    setTimeout(() => {  ctrA();
-                        setInterval(ctrA, 2400);},1200); 
     setInterval(effect, 40);
     setInterval(() => {
         if(scrolling){

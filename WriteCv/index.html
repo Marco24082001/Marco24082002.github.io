@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script
       src="https://kit.fontawesome.com/bb12d3ceff.js"
       crossorigin="anonymous"
@@ -54,12 +56,18 @@
             <canvas id="field"></canvas>
             <div class="home-content">
                 <h1>Võ Thành <span>Vĩ</span></h1>
-                <p class="animation">
-                    <span>I am a</span>
-                    <span class="animation-text" id="text-1"> Web developer </span> <span style="color: white">|</span>
-                    <!-- <span id="text-2"> UI/UX Designer</span> 
-                        <span id="text-3"> Freelancer</span>  -->
-                </p>
+                <div>   
+                    
+                    <span>
+                        I am a 
+                    </span>
+                    <span id="typed" style="color: black"></span>
+                    <div id="typed-strings">
+                        <p>Web Developer</p>
+                        <p>UI/UX Designer</p>
+                        <p>Freelancer</p>
+                    </div>
+                </div> 
             </div>
         </section>
         <section class="page about-me" id="page-about-me">
@@ -566,6 +574,17 @@
         </section>
     </div>
     <script type="text/javascript" src="./impact.js"></script>
+    <script>
+        $('document').ready(function(){
+            var typed = new Typed("#typed", {
+            stringsElement: '#typed-strings',
+            typeSpeed: 40,
+            backSpeed: 40,
+            loop: true,
+            });
+        });
+
+    </script>
 </body>
 
 </html>

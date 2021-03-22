@@ -166,20 +166,7 @@ img {
 }
 
 /* text animation */
-.animation-text {
-    position: relative;
-    bottom: -13px;
-    color: rgb(5, 5, 5); 
-    display: inline-block;
-    margin: 0px;
-    padding: 0px;
-    border-bottom: 2px solid #ffffff;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: type 1.2s steps(14, start); 
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
+
 
 @keyframes type{ 
     0%{max-width:100%;}
