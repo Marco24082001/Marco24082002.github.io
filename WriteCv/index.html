@@ -522,60 +522,58 @@
             </div>
         </section>
         <section class="page contact" id="page-contact">
-            <div class="topic">
-                <h1>Contact Me.</h1>
-                <!-- <svg class="lnr lnr-user"><use xlink:href="#lnr-user"></use></svg> -->
-                <span class="lnr lnr-envelope"></span>
-            </div>
-            <div class="subheading">
-                <h3>
-                    let's talk
-                </h3>
-            </div>
-            <div class="input-form">
-                <div class="input">
-                    <input class="input-field" id="name" type="text" required>
-                    <label class="input-lable" for="name">Name</label>
+            <div class="contactPage">
+                <div class="topic">
+                    <h1>Contact Me.</h1>
+                    <!-- <svg class="lnr lnr-user"><use xlink:href="#lnr-user"></use></svg> -->
+                    <span class="lnr lnr-envelope"></span>
                 </div>
-                <div class="input">
-                    <input class="input-field" id="email" type="text" required>
-                    <label class="input-lable" for="email">Email</label>
+                <div class="subheading">
+                    <h3>
+                        let's talk
+                    </h3>
+                </div>
+                <div class="input-form">
+                    <div class="input">
+                        <input class="input-field" id="name" type="text" required>
+                        <label class="input-lable" for="name">Name</label>
+                    </div>
+                    <div class="input">
+                        <input class="input-field" id="email" type="text" required>
+                        <label class="input-lable" for="email">Email</label>
+                    </div>
+                </div>
+                <div class="input-form">
+                    <div class="input">
+                        <textarea  class="input-field" id="message" rows="5" cols="50" required></textarea>
+                        <label class="input-lable" id="big-lable" for="message">How can i help you?</label>
+                    </div>
+                </div>
+                <div class="btn-contact">
+                    <a href="/#" class="btn-about">send message</a>
+                </div>
+                <div class="contact-information">
+                    <div class="gmail">
+                        <span class="icon"><i class="fas fa-paper-plane"></i></span>
+                        <h5>
+                            <a href="mailto:vothanhvi.dn248@gmail.com">vothanhvi.dn248@gmail.com</a>
+                        </h5>
+                    </div>
+                    <div class="address">
+                        <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+                        <h5>
+                            123 Lorem Ipsum, USA
+                        </h5>
+                    </div>
+                    <div class="phone-number">
+                        <span class="icon"><i class="fas fa-phone"></i></span>
+                        <h5>
+                            (+1) 123 456 7090
+                        </h5>
+                    </div>
                 </div>
             </div>
-            <div class="input-form">
-                <div class="input">
-                    <textarea  class="input-field" id="message" rows="5" cols="50" required></textarea>
-                    <label class="input-lable" id="big-lable" for="message">How can i help you?</label>
-                </div>
-            </div>
-            <div class="btn-contact">
-                <a href="/#" class="btn-about">send message</a>
-            </div>
-            <div class="contact-information">
-                <div class="gmail">
-                    <span class="icon"><i class="fas fa-paper-plane"></i></span>
-                    <h5>
-                        <a href="mailto:vothanhvi.dn248@gmail.com">vothanhvi.dn248@gmail.com</a>
-                    </h5>
-                </div>
-                <div class="address">
-                    <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
-                    <h5>
-                        123 Lorem Ipsum, USA
-                    </h5>
-                </div>
-                <div class="phone-number">
-                    <span class="icon"><i class="fas fa-phone"></i></span>
-                    <h5>
-                        (+1) 123 456 7090
-                    </h5>
-                </div>
-            </div>
-            <iframe id="map"
-                title="mapnik"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
-            </iframe>
-
+            <div id="map"></div>
         </section>
     </div>
     <script type="text/javascript" src="./impact.js"></script>
@@ -588,7 +586,30 @@
             loop: true,
             });
         });
+    </script>
+    <script>
+        let map;
 
+        function initMap() {
+            // Map option
+            var options = {
+                zoom:8,
+                center:{lat:16.089949,lng:108.245731},
+            }
+
+            //New map
+            var map = new google.maps.Map(document.getElementById("map"),options);
+
+            //Add marker
+            var marker = new google.map.marker({
+                position:{lat:16.089946,lng:108.245731},
+                map:map,
+            });
+            
+        }
+    </script>
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtfvJtfTEXHgmDnjG--uIZQHtn0nSHlRU&callback=initMap">
     </script>
 </body>
 

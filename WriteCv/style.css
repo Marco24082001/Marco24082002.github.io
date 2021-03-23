@@ -552,6 +552,14 @@ ul li{
 }
 
 /* set contact-page */
+.contact {
+    padding: 0px;
+}
+
+.contactPage {
+    padding: 50px 11%;
+    height: 100vh;
+}
 
 .input-form {
     display: flex;
@@ -633,7 +641,7 @@ ul li{
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 80px;
     text-align: center;
     color: white;
 }
