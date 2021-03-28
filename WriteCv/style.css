@@ -29,7 +29,7 @@ body {
 }
 
 /* hiden section */
-.resume, .contact, .about-me {
+.resume, .contact, .about-me, .portfolio {
     display: none;
 }
 
@@ -37,6 +37,10 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Playfair Display", serif;
 }
 
+a {
+    text-decoration: none;
+    color: white    ;
+}
 /* set proporty icon */
 .lnr::before {
     font-size: 38px;
@@ -56,6 +60,38 @@ h1, h2, h3, h4, h5, h6 {
 .footer {
     position: absolute;
     bottom: 0px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.social {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.social li {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.social li:last-child {
+    margin-right: 0;
+}
+
+.social li a {
+    color: #777;
+    transition: color .3s ease;
+}
+
+.social li a:hover {
+    color: white;
+}
+
+.copy {
+    font-size: 12px;
+    color: #777;
+    line-height: 1.65;
 }
 
 .site-main {
@@ -163,6 +199,10 @@ img {
     font-weight: 900;
     display: inline-block;
     color: #000000;
+}
+
+#typed {
+    border-bottom: 2px solid white;
 }
 
 /* design about me section */
@@ -551,6 +591,153 @@ ul li{
     left: 0px;
 }
 
+/* set portfolio-page */
+.button-portfolio {
+    position: relative;
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    display: inline-block;
+    line-height: 0;
+    left: 50%;
+    top: 49px;
+    transform: translateX(-50%);
+    margin-bottom: 40px;
+}
+
+.active-port {
+    background-color: #00A3E1;
+    color: black;
+    border-radius: 50px;
+}
+
+.button-portfolio span {
+    display: inline-block;
+    padding: 20px;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.grid-portfolio {
+    position: relative;
+    columns: 1;
+    column-gap: 30px;
+    width: 100%;
+    top: 45px;
+}
+
+.grid-portfolio .product {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    break-inside: avoid;
+    display: none;
+}
+
+.product img {
+    display: block;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+@media screen and (min-width: 575px)
+{
+    .grid-portfolio {
+        columns: 2;
+    }
+}
+
+@media screen and (min-width: 1000px)
+{
+    .grid-portfolio {
+        columns: 3;
+    }
+}
+
+.portfolio .product::before {
+    content: "";
+    position: absolute;
+    transition: all .3s ease-in;
+    background-color: #00A3E1;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.portfolio .product:hover::before {
+    opacity: 0.7;
+}
+
+.effect-img {
+    position: relative;;
+}
+
+.effect-img figcaption {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 8%;
+    z-index: 1;
+}
+
+.effect-img figcaption h4 {
+    transform: translateY(-600%);
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+
+.effect-img figcaption p, .effect-img figcaption h4 {
+    z-index: 1;
+}
+
+.effect-img figcaption p {
+    transform: translateY(600%);
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+
+.product:hover figcaption h4, .product:hover figcaption p {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.grid-portfolio .brand  figure:after {
+    content: "\f03e"; }
+  
+.grid-portfolio .design figure:after {
+    content: "\f03d"; }
+  
+.grid-portfolio .graphic figure:after {
+    content: "\f15c"; }
+
+.product figure::after {
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    bottom: 20px;
+    right: 25px;
+    color: #fff;
+    font-size: 26px;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all .3s ease-in;
+}
+
+.product:hover figure::after {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 1;
+}
+
+.grid-portfolio .show {
+    display: block;
+}
 /* set contact-page */
 .contact {
     padding: 0px;

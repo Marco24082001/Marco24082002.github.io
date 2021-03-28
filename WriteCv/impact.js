@@ -66,6 +66,8 @@ document.getElementById("about-me").addEventListener("click", nextSection1);
 document.getElementById("home").addEventListener("click", nextSection2);
 document.getElementById("contact").addEventListener("click", nextSection3);
 document.getElementById("resume").addEventListener("click", nextSection4);
+document.getElementById("portfolio").addEventListener("click", nextSection5);
+
 
 
 function nextSection1() {
@@ -73,6 +75,8 @@ function nextSection1() {
     document.getElementById("page-home").style.display = "none";
     document.getElementById("page-contact").style.display = "none";
     document.getElementById("page-resume").style.display = "none";
+    document.getElementById("page-portfolio").style.display = "none";
+
 }
 
 function nextSection2() {
@@ -80,6 +84,7 @@ function nextSection2() {
     document.getElementById("page-home").style.display = "block";
     document.getElementById("page-contact").style.display = "none";
     document.getElementById("page-resume").style.display = "none";
+    document.getElementById("page-portfolio").style.display = "none";
 }
 
 function nextSection3() {
@@ -87,6 +92,7 @@ function nextSection3() {
     document.getElementById("page-home").style.display = "none";
     document.getElementById("page-contact").style.display = "block";
     document.getElementById("page-resume").style.display = "none";
+    document.getElementById("page-portfolio").style.display = "none";
 }
 
 function nextSection4() {
@@ -94,6 +100,15 @@ function nextSection4() {
     document.getElementById("page-home").style.display = "none";
     document.getElementById("page-contact").style.display = "none";
     document.getElementById("page-resume").style.display = "block";
+    document.getElementById("page-portfolio").style.display = "none";
+}
+
+function nextSection5() {
+    document.getElementById("page-about-me").style.display = "none";
+    document.getElementById("page-home").style.display = "none";
+    document.getElementById("page-contact").style.display = "none";
+    document.getElementById("page-resume").style.display = "none";
+    document.getElementById("page-portfolio").style.display = "block";
 }
 
 
@@ -169,3 +184,30 @@ $(document).ready(function () {
         }
     });
 });
+
+//set button portpoloio
+var btns = document.getElementsByClassName("btn");
+
+for(var i = 0; i < btns.length; i++)
+{
+    btns[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active-port");
+        current[0].className = current[0].className.replace(" active-port", "");
+        this.className += " active-port";
+    });
+};
+
+// filter portfolio
+
+function filter(status) {
+    var x = document.getElementsByClassName("product");
+    if(status == "all") status = "product";
+    for(i = 0; i < x.length; i++)
+    {
+        arr1 = x[i].className.split(" ");
+        if(arr1.indexOf("show") > -1) arr1.splice(arr1.indexOf('show'), 1);
+        x[i].className = arr1.join(" ");
+
+        if(arr1.indexOf(status) > -1)  x[i].className += " show";
+    }
+}
