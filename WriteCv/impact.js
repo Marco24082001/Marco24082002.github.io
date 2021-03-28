@@ -185,17 +185,23 @@ $(document).ready(function () {
     });
 });
 
-//set button portpoloio
-var btns = document.getElementsByClassName("btn");
-
-for(var i = 0; i < btns.length; i++)
+//set button
+function setActive(name, nameactive)
 {
-    btns[i].addEventListener("click", function(){
-        var current = document.getElementsByClassName("active-port");
-        current[0].className = current[0].className.replace(" active-port", "");
-        this.className += " active-port";
-    });
-};
+    var btns = document.getElementsByClassName(name);
+
+    for(var i = 0; i < btns.length; i++)
+    {
+        btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName(nameactive);
+            current[0].className = current[0].className.replace(" " + nameactive, "");
+            this.className += " " + nameactive;
+        });
+    };
+}
+setActive("btn", "active-port"); //set button portfolio
+setActive("menu", "active-menu"); //set button menu
+
 
 // filter portfolio
 

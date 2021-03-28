@@ -8,6 +8,11 @@
     text-decoration: none;
 }
 
+ul li{
+    list-style-type: none;
+    margin: 0 0;
+}
+
 html {
     /* scroll-behavior: smooth; */
     font-family: sans-serif;
@@ -145,22 +150,32 @@ img {
     z-index: -1;
 }
 
-.menu, .menu a {
+.menu, .menu  a {
     border-bottom: solid 1px black;
     font-size: 13px;
     height: 50px;
     line-height: 50px;
-    color : white;
+    color : #777;
     display: block;
     text-transform: uppercase;
     text-align: left;
-    padding-left: 20px;
+    padding-left: 20px; 
 }
 
-.menu img{
-    vertical-align: middle;
-    margin-right: 5px;
+
+.menu a .lnr::before {
+    color: #777;
+    font-size: 20px;
+    line-height: 45px;
+    vertical-align: sub;
+    padding-right: 7px;
 }
+
+
+.active-menu, .active-menu a, .active-menu a .lnr::before{
+    color: white;
+}
+
 
 /* design home section */
 
@@ -250,13 +265,6 @@ img {
 .about {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-}
-
-
-
-ul li{
-    list-style-type: none;
-    margin: 0 0 12px;
 }
 
 .about h3 {

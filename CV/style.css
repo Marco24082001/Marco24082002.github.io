@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    position: relative;
+    width: 100%;
+}
+
+.gallery {
+    position: relative;
+    columns: 4;
+    column-fill: balance;
+    column-gap: 20px;
+    padding: 2rem;
+    background-color: white;
+    margin: 20px auto;
+    width: 100%;
+    display: inline-block;
+}
+
+.img-brick {
+    float: right;
+    overflow: hidden;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 20px;
+    break-inside: avoid;
+}
+
+.img-brick img {
+    display: block;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+
+/* .gallery {
+    display: flex;
+    flex-wrap: column;
+    width: 100%;
+    height: auto;
+    flex-flow: column wrap;
+    height: 750px;
+}
+
+.img {
+    width: 20%;
+}
+.img img{
+    width: 100%;
+} */
