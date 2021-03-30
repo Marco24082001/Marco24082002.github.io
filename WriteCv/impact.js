@@ -133,12 +133,12 @@ window.onload = function () {
     setInterval(effect, 40);
     setInterval(() => {
         if(scrolling){
-            styleElement.appendChild(document.createTextNode("::-webkit-scrollbar-thumb {background: black;}"));
+            styleElement.appendChild(document.createTextNode("::-webkit-scrollbar-thumb {background: black;} ::-webkit-scrollbar {width: 7px;}"));
             document.getElementsByTagName("head")[0].appendChild(styleElement);
             scrolling = false;
         }
         else{
-            styleElement.appendChild(document.createTextNode("::-webkit-scrollbar-thumb {background: transparent;}"));
+            styleElement.appendChild(document.createTextNode("::-webkit-scrollbar-thumb {background: transparent;} ::-webkit-scrollbar {width: 0px;}"));
             document.getElementsByTagName("head")[0].appendChild(styleElement);
         }
     }, 100);
@@ -217,3 +217,19 @@ function filter(status) {
         if(arr1.indexOf(status) > -1)  x[i].className += " show";
     }
 }
+
+wow = new WOW(
+    {
+    boxClass:     'wow',      // default
+    animateClass: 'progress', // default
+    offset:       0,          // default
+    mobile:       true,       // default
+    live:         true        // default
+  }
+  )
+  wow.init();
+
+// btncolor 
+$(".toggle-button").click(function(){
+    $(".color-Ctr").toggleClass("active");
+});

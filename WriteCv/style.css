@@ -19,7 +19,7 @@ html {
 }
 
 ::-webkit-scrollbar {
-    width: 7px;
+    width: 0px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -51,6 +51,93 @@ a {
     font-size: 38px;
     color: #00A3E1;
 }
+/* design color-Ctr */
+.color-Ctr {
+    position: fixed;
+    top: 80px;
+    z-index: 1;
+    right: 0;
+    transform: translateX(100%);
+    background-color: white;
+    padding: 30px;
+    transition: all .3s ease;
+}
+
+.color-Ctr.active{  
+    transform: translateX(0);
+}
+
+.toggle-button {
+    padding: 6px;
+    position: absolute;
+    display: inline-block;
+    left: 0px;
+    top: 0px;
+    transform: translateX(-100%);
+    background-color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.toggle-button span .fas::before {
+    font-size: 26px;
+    vertical-align: middle;
+    color: #777;
+}
+
+.toggle-button span i{
+    animation-name: settings;
+    animation-duration: 1.5s;  
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #777;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.color-Ctr {
+    color: #222;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+
+.color-Ctr .color-menu h4{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.color-theme {
+    margin: 20px 0px;
+}
+
+.color-theme ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 130px;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.color-theme ul li {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+}
+
+@keyframes settings {
+    0% {
+      transform: rotate(0deg);
+      -webkit-transform: rotate(0deg); }
+    100% {
+      transform: rotate(360deg);
+      -webkit-transform: rotate(360deg); } }
 
 /* design menu */
 .header {
@@ -576,7 +663,10 @@ img {
 .progress {
     background: #00A3E1;
     position: relative;
-    width: 30%;
+    width: 71%;
+    animation-name: increaseW;
+    animation-duration: 2s;
+    transition: all 2s ease-in;
 }
 
 .progress .progress-value {
@@ -588,6 +678,7 @@ img {
     font-family: "Roboto", sans-serif;
     color: white;
     vertical-align: middle;
+    
 }
 .progress .progress-value::after {
     position: absolute;
@@ -597,6 +688,11 @@ img {
     border-right: 17px solid transparent;
     bottom: -25px;
     left: 0px;
+}
+
+@keyframes increaseW {
+    0% {width: 0%;}
+    100% {width: 71%;}
 }
 
 /* set portfolio-page */
