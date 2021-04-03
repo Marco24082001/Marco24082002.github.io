@@ -545,6 +545,30 @@ img {
     gap: 25px;
 }
 
+@media screen and (max-width: 770px)
+{
+    .exp-edu {
+        flex-direction: column;    
+    }
+}
+
+@media screen and (max-width: 770px)
+{
+    .header {
+        display: none;
+    }
+    .site-main {
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .information {
+        flex-direction: column;
+    }
+}
+
+
 .experience, .education {
     flex: 50%;
 }
