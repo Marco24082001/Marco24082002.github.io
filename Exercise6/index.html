@@ -76,341 +76,338 @@
     </style>
     <title>Document</title>
 </head>
-
 <body>
-
-    <body>
-        <div class="fullAnswer">
-            <div class="Bt1" onclick="Show(1)">
-                <div class="Question">
-                    <span class="icon"><i class="fas fa-fire"></i></span>
-                    BT1: Viết chương trình để hiển thị ngày giờ
-                </div>
-                <div class="Answer">
-                    <h1>Date & Time: <span id="datetime"></span></h1>
-                </div>
+    <h1 style="text-align: center;">Tìm hiểu : <a href="https://docs.google.com/document/d/1sEVpZdlFramuThxL4xy_qde5gLfS8sjQ_lWYtt0zAKo/edit?usp=sharing">coercion</a></h1>
+    <div class="fullAnswer">
+        <div class="Bt1" onclick="Show(1)">
+            <div class="Question">
+                <span class="icon"><i class="fas fa-fire"></i></span>
+                BT1: Viết chương trình để hiển thị ngày giờ
             </div>
-            <div class="Bt2" onclick="Show(2)">
-                <div class="Question">
-                    <span class="icon"><i class="fas fa-fire"></i></span>
-                    BT2: In ra ngày tháng năm theo các định dạng mm-dd-
-                    yyyy, mm/dd/yyyy, dd-mm-yyyy, dd/mm/yyyy
-                </div>
-                <div class="Answer">
-                    <h1>
-                        mm-dd-yyyy: <span id="one"></span>
-                    </h1>
-                    <h1>
-                        mm/dd/yyyy: <span id="two"></span>
-                    </h1>
-                    <h1>
-                        dd-mm-yyyy: <span id="three"></span>
-                    </h1>
-                    <h1>
-                        dd/mm/yyyy: <span id="four"></span>
-                    </h1>
-                </div>
+            <div class="Answer">
+                <h1>Date & Time: <span id="datetime"></span></h1>
             </div>
-            <div class="Bt3" onclick="Show(3)">
-                <div class="Question">
-                    <span class="icon"><i class="fas fa-fire"></i></span>
-                    BT3: Kiểm tra xem một số nguyên đã cho có
-                    chuỗi chữ số tăng hay không
-                </div>
-                <div class="Answer">
-                    <div class="input-group">
-                        <input type="number" id="inPut3-1" onkeydown="checkIncr(this)" required>
-                        <label for="inPut3-1">Vui lòng nhập một chuỗi số</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="text" id="inPut3-2" required>
-                        <label for="inPut3-2">Kết quả</label>
-                    </div>
-                </div>
+        </div>
+        <div class="Bt2" onclick="Show(2)">
+            <div class="Question">
+                <span class="icon"><i class="fas fa-fire"></i></span>
+                BT2: In ra ngày tháng năm theo các định dạng mm-dd-
+                yyyy, mm/dd/yyyy, dd-mm-yyyy, dd/mm/yyyy
             </div>
-            <div class="Bt4" onclick="Show(4)">
-                <div class="Question">
-                    <span class="icon"><i class="fas fa-fire"></i></span>
-                    BT4: thay thế mọi ký tự trong một chuỗi đã
-                    cho với ký tự theo sau nó trong bảng chữ cái.
-                </div>
-                <div class="Answer">
-                    <div class="input-group">
-                        <input type="text" id="inPut4-1" onkeydown="changeStr(this)" required>
-                        <label for="inPut4-1">Vui lòng nhập một chuỗi ký tự</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="text" id="inPut4-2" required>
-                        <label for="inPut4-2">Kết quả</label>
-                    </div>
-                </div>
+            <div class="Answer">
+                <h1>
+                    mm-dd-yyyy: <span id="one"></span>
+                </h1>
+                <h1>
+                    mm/dd/yyyy: <span id="two"></span>
+                </h1>
+                <h1>
+                    dd-mm-yyyy: <span id="three"></span>
+                </h1>
+                <h1>
+                    dd/mm/yyyy: <span id="four"></span>
+                </h1>
             </div>
-            <div class="Bt5" onclick="Show(5)">
-                <div class="Question">
-                    <span class="icon"><i class="fas fa-fire"></i></span>
-                    BT5: tạo chuỗi bằng cách sử dụng ba ký tự ở
-                    giữa của một chuỗi có độ dài lẻ. Độ dài chuỗi phải lớn hơn hoặc bằng ba.
-                </div>
-                <div class="Answer">
-                    <div class="input-group">
-                        <input type="text" id="inPut5-1" onkeydown="createStr(this)" required>
-                        <label for="inPut5-1">Vui lòng nhập một chuỗi ký tự</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="text" id="inPut5-2" required>
-                        <label for="inPut5-2">Kết quả</label>
-                    </div>
-                </div>
+        </div>
+        <div class="Bt3" onclick="Show(3)">
+            <div class="Question">
+                <span class="icon"><i class="fas fa-fire"></i></span>
+                BT3: Kiểm tra xem một số nguyên đã cho có
+                chuỗi chữ số tăng hay không
             </div>
-            <div class="Bt6" onclick="Show(6)">
-                <div class="Question">
-                    <span class="icon"><i class="fas fa-fire"></i></span>
-                    BT6: Hiển thị số xuất hiện nhiều lần nhất trong mảng
+            <div class="Answer">
+                <div class="input-group">
+                    <input type="number" id="inPut3-1" onkeydown="checkIncr(this)" required>
+                    <label for="inPut3-1">Vui lòng nhập một chuỗi số</label>
                 </div>
-                <div class="Answer">
-                    <div class="input-group">
-                        <input type="number" id="inPut6-1" onkeydown="mostApear(this)" required>
-                        <label for="inPut6-1">Vui lòng nhập một chuỗi số</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="text" id="inPut6-2" required>
-                        <label for="inPut6-2">Kết quả</label>
-                    </div>
-                </div>
-            </div>
-            <div class="Bt7" onclick="Show(7)">
-                <div class="Question">
-                    <span class="icon"><i class="fas fa-fire"></i></span>
-                    BT7: Kiểm tra xem chuỗi chứa &#39;java&#39; hay không
-                </div>
-                <div class="Answer">
-                    <div class="input-group">
-                        <input type="text" id="inPut7-1" onkeydown="checkHas(this)" required>
-                        <label for="inPut7-1">Vui lòng nhập một chuỗi ký tự</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="text" id="inPut7-2" required>
-                        <label for="inPut7-2">Kết quả</label>
-                    </div>
-                </div>
-            </div>
-            <div class="Bt8" onclick="Show(8)">
-                <div class="Question">
-                    <span class="icon"><i class="fas fa-fire"></i></span>
-                    BT8: Lấy tên tháng từ một số cụ thể ( ví dụ : 1 – Tháng một )
-                </div>
-                <div class="Answer">
-                    <div class="input-group">
-                        <input type="number" id="inPut8-1" onkeydown="nameMonth(this)" required>
-                        <label for="inPut8-1">Vui lòng nhập một chuỗi số</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="text" id="inPut8-2" required>
-                        <label for="inPut8-2">Kết quả</label>
-                    </div>
-                </div>
-            </div>
-            <div class="Bt9" onclick="Show(9)">
-                <div class="Question">
-                    <span class="icon"><i class="fas fa-fire"></i></span>
-                    BT9: Nhập một chuỗi và tìm từ dài nhất trong chuỗi
-                </div>
-                <div class="Answer">
-                    <div class="input-group">
-                        <input type="text" id="inPut9-1" onkeydown="mostWord(this)" required>
-                        <label for="inPut9-1">Vui lòng nhập một chuỗi số</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="text" id="inPut9-2" required>
-                        <label for="inPut9-2">Kết quả</label>
-                    </div>
-                </div>
-            </div>
-            <div class="Bt10" onclick="Show(10)">
-                <div class="Question">
-                    <span class="icon"><i class="fas fa-fire"></i></span>
-                    BT10: Tạo form HTML nhập 2 số và in ra giá trị là số nguyên
-                    tố giữa 2 số đó
-                </div>
-                <div class="Answer">
-                    <div class="input-group">
-                        <input type="number" class= "B10" id="inPut10-1" onkeydown="printPrime(this)" required>
-                        <label for="inPut10-1">Vui lòng nhập một số</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="number" class= "B10" id="inPut10-2" onkeydown="printPrime(this)" required>
-                        <label for="inPut10-2">Vui lòng nhập một số</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="text" id="inPut10-3" required>
-                        <label for="inPut10-3">Kết quả</label>
-                    </div>
+                <div class="input-group">
+                    <input type="text" id="inPut3-2" required>
+                    <label for="inPut3-2">Kết quả</label>
                 </div>
             </div>
         </div>
-    </body>
-    <script>
-        function Show(index) {
-            let Answer = document.getElementsByClassName("Answer");
-            for (let i = 0; i < Answer.length; i++) {
-                Answer[i].style.display = "none";
-            }
-            Answer[index - 1].style.display = "block";
+        <div class="Bt4" onclick="Show(4)">
+            <div class="Question">
+                <span class="icon"><i class="fas fa-fire"></i></span>
+                BT4: thay thế mọi ký tự trong một chuỗi đã
+                cho với ký tự theo sau nó trong bảng chữ cái.
+            </div>
+            <div class="Answer">
+                <div class="input-group">
+                    <input type="text" id="inPut4-1" onkeydown="changeStr(this)" required>
+                    <label for="inPut4-1">Vui lòng nhập tên của bạn</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="inPut4-2" required>
+                    <label for="inPut4-2">foreign name</label>
+                </div>
+            </div>
+        </div>
+        <div class="Bt5" onclick="Show(5)">
+            <div class="Question">
+                <span class="icon"><i class="fas fa-fire"></i></span>
+                BT5: tạo chuỗi bằng cách sử dụng ba ký tự ở
+                giữa của một chuỗi có độ dài lẻ. Độ dài chuỗi phải lớn hơn hoặc bằng ba.
+            </div>
+            <div class="Answer">
+                <div class="input-group">
+                    <input type="text" id="inPut5-1" onkeydown="createStr(this)" required>
+                    <label for="inPut5-1">Vui lòng nhập một chuỗi ký tự</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="inPut5-2" required>
+                    <label for="inPut5-2">Kết quả</label>
+                </div>
+            </div>
+        </div>
+        <div class="Bt6" onclick="Show(6)">
+            <div class="Question">
+                <span class="icon"><i class="fas fa-fire"></i></span>
+                BT6: Hiển thị số xuất hiện nhiều lần nhất trong mảng
+            </div>
+            <div class="Answer">
+                <div class="input-group">
+                    <input type="number" id="inPut6-1" onkeydown="mostApear(this)" required>
+                    <label for="inPut6-1">Vui lòng nhập một chuỗi số</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="inPut6-2" required>
+                    <label for="inPut6-2">Kết quả</label>
+                </div>
+            </div>
+        </div>
+        <div class="Bt7" onclick="Show(7)">
+            <div class="Question">
+                <span class="icon"><i class="fas fa-fire"></i></span>
+                BT7: Kiểm tra xem chuỗi chứa &#39;java&#39; hay không
+            </div>
+            <div class="Answer">
+                <div class="input-group">
+                    <input type="text" id="inPut7-1" onkeydown="checkHas(this)" required>
+                    <label for="inPut7-1">Vui lòng nhập một chuỗi ký tự</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="inPut7-2" required>
+                    <label for="inPut7-2">Kết quả</label>
+                </div>
+            </div>
+        </div>
+        <div class="Bt8" onclick="Show(8)">
+            <div class="Question">
+                <span class="icon"><i class="fas fa-fire"></i></span>
+                BT8: Lấy tên tháng từ một số cụ thể ( ví dụ : 1 – Tháng một )
+            </div>
+            <div class="Answer">
+                <div class="input-group">
+                    <input type="number" id="inPut8-1" onkeydown="nameMonth(this)" required>
+                    <label for="inPut8-1">Vui lòng nhập một chuỗi số</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="inPut8-2" required>
+                    <label for="inPut8-2">Kết quả</label>
+                </div>
+            </div>
+        </div>
+        <div class="Bt9" onclick="Show(9)">
+            <div class="Question">
+                <span class="icon"><i class="fas fa-fire"></i></span>
+                BT9: Nhập một chuỗi và tìm từ dài nhất trong chuỗi
+            </div>
+            <div class="Answer">
+                <div class="input-group">
+                    <input type="text" id="inPut9-1" onkeydown="mostWord(this)" required>
+                    <label for="inPut9-1">Vui lòng nhập một chuỗi số</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="inPut9-2" required>
+                    <label for="inPut9-2">Kết quả</label>
+                </div>
+            </div>
+        </div>
+        <div class="Bt10" onclick="Show(10)">
+            <div class="Question">
+                <span class="icon"><i class="fas fa-fire"></i></span>
+                BT10: Tạo form HTML nhập 2 số và in ra giá trị là số nguyên
+                tố giữa 2 số đó
+            </div>
+            <div class="Answer">
+                <div class="input-group">
+                    <input type="number" class="B10" id="inPut10-1" onkeydown="printPrime(this)" required>
+                    <label for="inPut10-1">Vui lòng nhập một số</label>
+                </div>
+                <div class="input-group">
+                    <input type="number" class="B10" id="inPut10-2" onkeydown="printPrime(this)" required>
+                    <label for="inPut10-2">Vui lòng nhập một số</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="inPut10-3" required>
+                    <label for="inPut10-3">Kết quả</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function Show(index) {
+        let Answer = document.getElementsByClassName("Answer");
+        for (let i = 0; i < Answer.length; i++) {
+            Answer[i].style.display = "none";
         }
+        Answer[index - 1].style.display = "block";
+    }
 
-        // Câu 1
-        let arrBT = document.getElementsByClassName("Answer");
+    // Câu 1
+    let arrBT = document.getElementsByClassName("Answer");
+    let today = new Date();
+    document.getElementById("datetime").innerHTML = today.toLocaleTimeString() + " " + today.toLocaleDateString()
+    setInterval(() => {
         let today = new Date();
         document.getElementById("datetime").innerHTML = today.toLocaleTimeString() + " " + today.toLocaleDateString()
-        setInterval(() => {
-            let today = new Date();
-            document.getElementById("datetime").innerHTML = today.toLocaleTimeString() + " " + today.toLocaleDateString()
-        }, 1000);
+    }, 1000);
 
-        // Câu 2
-        let formatdate1 = today.getMonth() + 1 + "-" + today.getDate() + "-" + today.getFullYear();
-        let formatdate2 = today.getMonth() + 1 + "/" + today.getDate() + "/" + today.getFullYear();
-        let formatdate3 = today.getDate() + "-" + (today.getMonth() + 1) + "-" + today.getFullYear();
-        let formatdate4 = today.getDate() + "/" + (today.getMonth() + 1) + "/" + today.getFullYear();
-        document.getElementById("one").innerHTML = formatdate1;
-        document.getElementById("two").innerHTML = formatdate2;
-        document.getElementById("three").innerHTML = formatdate3;
-        document.getElementById("four").innerHTML = formatdate4;
+    // Câu 2
+    let formatdate1 = today.getMonth() + 1 + "-" + today.getDate() + "-" + today.getFullYear();
+    let formatdate2 = today.getMonth() + 1 + "/" + today.getDate() + "/" + today.getFullYear();
+    let formatdate3 = today.getDate() + "-" + (today.getMonth() + 1) + "-" + today.getFullYear();
+    let formatdate4 = today.getDate() + "/" + (today.getMonth() + 1) + "/" + today.getFullYear();
+    document.getElementById("one").innerHTML = formatdate1;
+    document.getElementById("two").innerHTML = formatdate2;
+    document.getElementById("three").innerHTML = formatdate3;
+    document.getElementById("four").innerHTML = formatdate4;
 
-        // Câu 3
-        function checkIncr(e) {
-            let check = true;
-            if (event.key === 'Enter') {
-                for (i = 0; i < e.value.length - 1; i++) {
-                    if (e.value[i] >= e.value[i + 1]) {
-                        check = false;
-                        break;
-                    }
+    // Câu 3
+    function checkIncr(e) {
+        let check = true;
+        if (event.key === 'Enter') {
+            for (i = 0; i < e.value.length - 1; i++) {
+                if (e.value[i] >= e.value[i + 1]) {
+                    check = false;
+                    break;
                 }
-                document.getElementById("inPut3-2").value = check;
             }
+            document.getElementById("inPut3-2").value = check;
         }
+    }
 
-        // Câu 4
-        function changeStr(e) {
-            if (event.key === 'Enter') {
+    // Câu 4
+    function changeStr(e) {
+        if (event.key === 'Enter') {
+            let str = "";
+            for (i = 0; i < e.value.length; i++) {
+                str += String.fromCharCode(e.value.charCodeAt(i) + 1);
+            }
+            document.getElementById("inPut4-2").value = str;
+        }
+    }
+
+    // Câu 5
+    function createStr(e) {
+        if (event.key === 'Enter') {
+            if (e.value.length >= 3 && (e.value.length % 2 != 0)) {
                 let str = "";
-                for (i = 0; i < e.value.length; i++) {
-                    str += String.fromCharCode(e.value.charCodeAt(i) + 1);
+                lenStr = Math.floor((Math.random() * (10 - 3 + 1))) + 3;
+                middle = e.value.length / 2 - .5;
+                for (i = 0; i < lenStr; i++) {
+                    str += e.value[Math.floor(Math.random() * 3 + (middle - 1))];
                 }
-                document.getElementById("inPut4-2").value = str;
+                document.getElementById("inPut5-2").value = str;
+            }
+            else {
+                document.getElementById("inPut5-2").value = "string must over three and old";
             }
         }
+    }
 
-        // Câu 5
-        function createStr(e) {
-            if (event.key === 'Enter') {
-                if (e.value.length >= 3 && (e.value.length % 2 != 0)) {
-                    let str = "";
-                    lenStr = Math.floor((Math.random() * (10 - 3 + 1))) + 3;
-                    middle = e.value.length / 2 - .5;
-                    for (i = 0; i < lenStr; i++) {
-                        str += e.value[Math.floor(Math.random() * 3 + (middle - 1))];
+    // Câu 6
+    function mostApear(e) {
+        if (event.key === 'Enter') {
+            let maxNum = e.value[0];
+            let max = 0;
+            let obj = {};
+            for (let i = 0; i < e.value.length; i++) {
+                if (obj[e.value[i]]) {
+                    obj[e.value[i]] += 1;
+                    if (obj[e.value[i]] > max) {
+                        max = obj[e.value[i]];
+                        maxNum = e.value[i];
                     }
-                    document.getElementById("inPut5-2").value = str;
                 }
                 else {
-                    document.getElementById("inPut5-2").value = "string must over three and old";
+                    obj[e.value[i]] = 1;
                 }
             }
+            document.getElementById("inPut6-2").value = maxNum;
         }
+    }
 
-        // Câu 6
-        function mostApear(e) {
-            if (event.key === 'Enter') {
-                let maxNum = e.value[0];
-                let max = 0;
-                let obj = {};
-                for (let i = 0; i < e.value.length; i++) {
-                    if (obj[e.value[i]]) {
-                        obj[e.value[i]] += 1;
-                        if (obj[e.value[i]] > max) {
-                            max = obj[e.value[i]];
-                            maxNum = e.value[i];
-                        }
-                    }
-                    else {
-                        obj[e.value[i]] = 1;
-                    }
+    // Câu 7
+    function checkHas(e) {
+        if (event.key === 'Enter') {
+            let check = false;
+            if (e.value.indexOf("java") > -1) {
+                check = true;
+            }
+            document.getElementById("inPut7-2").value = check;
+        }
+    }
+
+    // Câu 8
+    function nameMonth(e) {
+        if (event.key === 'Enter') {
+            let name;
+            switch (parseInt(e.value)) {
+                case 1: name = "Tháng một"; break;
+                case 2: name = "Tháng hai"; break;
+                case 3: name = "Tháng ba"; break;
+                case 4: name = "Tháng tư"; break;
+                case 5: name = "Tháng năm"; break;
+                case 6: name = "Tháng sáu"; break;
+                case 7: name = "Tháng bảy"; break;
+                case 8: name = "Tháng tám"; break;
+                case 9: name = "Tháng chín"; break;
+                case 10: name = "Tháng mười"; break;
+                case 11: name = "Tháng mười một"; break;
+                case 12: name = "Tháng mười hai"; break;
+                default: name = "Don't have"; break;
+            }
+            document.getElementById("inPut8-2").value = name;
+        }
+    }
+
+    // Câu 9
+    function mostWord(e) {
+        if (event.key === 'Enter') {
+            let arrStr = e.value.split(" ");
+            console.log(arrStr);
+            max = 0;
+            for (let i = 1; i < arrStr.length; i++) {
+                if (arrStr[i].length > arrStr[max].length) {
+                    max = i;
                 }
-                document.getElementById("inPut6-2").value = maxNum;
             }
+            document.getElementById("inPut9-2").value = arrStr[max];
         }
+    }
 
-        // Câu 7
-        function checkHas(e) {
-            if (event.key === 'Enter') {
-                let check = false;
-                if (e.value.indexOf("java") > -1) {
-                    check = true;
-                }
-                document.getElementById("inPut7-2").value = check;
-            }
+    // Câu 10
+    function checkPrime(num) {
+        for (let i = 2; i <= Math.floor(num / 2); i++) {
+            console.log(Math.floor(num / 2));
+            if (num % i == 0) return false;
         }
+        return true;
+    }
 
-        // Câu 8
-        function nameMonth(e) {
-            if (event.key === 'Enter') {
-                let name;
-                switch (parseInt(e.value)) {
-                    case 1: name = "Tháng một"; break;
-                    case 2: name = "Tháng hai"; break;
-                    case 3: name = "Tháng ba"; break;
-                    case 4: name = "Tháng tư"; break;
-                    case 5: name = "Tháng năm"; break;
-                    case 6: name = "Tháng sáu"; break;
-                    case 7: name = "Tháng bảy"; break;
-                    case 8: name = "Tháng tám"; break;
-                    case 9: name = "Tháng chín"; break;
-                    case 10: name = "Tháng mười"; break;
-                    case 11: name = "Tháng mười một"; break;
-                    case 12: name = "Tháng mười hai"; break;
-                    default: name = "Don't have"; break;
-                }
-                document.getElementById("inPut8-2").value = name;
+    function printPrime(e) {
+        if (event.key === 'Enter') {
+            let arr = document.getElementsByClassName("B10");
+            let arrPrime = ""
+            for (let i = parseInt(arr[0].value); i <= parseInt(arr[1].value); i++) {
+                if (checkPrime(i)) arrPrime += " " + i;
             }
+            document.getElementById("inPut10-3").value = arrPrime;
         }
-
-        // Câu 9
-        function mostWord(e) {
-            if (event.key === 'Enter') {
-                let arrStr = e.value.split(" ");
-                console.log(arrStr);
-                max = 0;
-                for (let i = 1; i < arrStr.length; i++) {
-                    if (arrStr[i].length > arrStr[max].length) {
-                        max = i;
-                    }
-                }
-                document.getElementById("inPut9-2").value = arrStr[max];
-            }
-        }
-
-        // Câu 10
-        function checkPrime(num) {
-            for (let i = 2; i <= Math.floor(num / 2); i++) {
-                console.log(Math.floor(num / 2));
-                if (num % i == 0) return false;
-            }
-            return true;
-        }
-
-        function printPrime(e) {
-            if (event.key === 'Enter') {
-                let arr = document.getElementsByClassName("B10");
-                let arrPrime = ""
-                for (let i = parseInt(arr[0].value); i <= parseInt(arr[1].value); i++) {
-                    if (checkPrime(i)) arrPrime += " " + i;
-                }
-                document.getElementById("inPut10-3").value = arrPrime;
-            }
-        }
-    </script>
-</body>
+    }
+</script>
 
 </html>
