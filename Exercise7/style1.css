@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 2%;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+td, th {
+    border-bottom : 1px solid rgb(202, 198, 198);
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+table th {
+    text-align: left;
+}
+.table {
+   border: 1px solid rgb(202, 198, 198);
+   padding: 10px;
+   display: flex;
+   align-items: center;
+   gap: 20px;
+   margin-bottom: 20px;
+}
+
+.table .column {
+    flex: 25%;
+}
+
+#nameitem {
+    outline: none;
+    border: 1px solid rgb(202, 198, 198);
+    padding: 5px;
+    margin-top: 10px;
+    width: 100%;
+    pointer-events: auto;
+}
+
+.result-1, .result-2 {
+    color: red;
+    font-size: 0.9rem;
+    display: block;
+    height: 0.5rem;
+}
+.table select {
+    outline: none;
+    border: 1px solid rgb(202, 198, 198);
+    padding: 5px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+#submit {
+    width: 50%;
+    border-radius: 50%;
+    outline: none;
+    background-color: blue;
+    color: white;
+    text-align: center;
+}
+
+.img {
+    width: 150px;
+    height: 75px;
+    display: inline-block;
+}
+
+.img-element {
+    width: 100px;
+    height: 50px;
+    vertical-align: middle;
+}
+
+.nameitems {
+    pointer-events: none;
+}
+
+
+.btn-edit {
+    background-color: blue;
+    color: white;
+    margin-right: 10px;
+    padding: 5px 10px;
+}
+.btn-delete {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+}
+
+.submit {
+    background-color: green;
+    color: white;
+    margin-right: 10px;
+    padding: 5px 10px;
+}
+
+.btn-choosefile {
+    display: none;
+}
