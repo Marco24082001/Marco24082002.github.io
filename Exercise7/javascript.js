@@ -8,7 +8,7 @@ let result_1 = document.getElementsByClassName("result-1");
 let result_2 = document.getElementsByClassName("result-2");
 let btn_choosefile = document.getElementsByClassName("btn-choosefile");
 let header = '<tr><th>#</th><th>Item Name</th><th>Category</th><th>image</th><th>Action</th></tr>'
-const regPattern = /^[^0-9][a-z0-9_ ]{0,9}$/i;
+const regPattern = /^[^0-9][a-z0-9_ ]{0,8}$/i;
 let str;
 
 Showdata();
@@ -141,7 +141,7 @@ function Showdata() {
         </td>
         <td>
             <input type="button" class="btn-edit" value="Edit" onclick="edit(${index + 1})"></input>
-            <button class="btn-delete" onclick="Delete(${index})">Delete</button>
+            <input type="button" class="btn-delete" value="Delete" onclick="Delete(${index})"></input>
         </td>    
     </tr>`
     });
@@ -152,10 +152,12 @@ function Showdata() {
 }
 
 function edit(index) {
-
+    let btn_delete = document.getElementsByClassName("btn-delete")[index - 1];
     let btn_edit = document.getElementsByClassName("btn-edit")[index - 1];
     if (btn_edit.classList.item(0) == "btn-edit" && !btn_edit.classList.item(1)) {
         btn_edit.classList.add("submit");
+        btn_delete.classList.add("Cancel");
+        btn_delete.value = "Cancel";
         btn_edit.value = "Save";
         document.getElementsByClassName("nameitems")[index].style['pointer-events'] = 'auto';
         document.getElementsByClassName("listselect")[index].disabled = false;
@@ -167,10 +169,18 @@ function edit(index) {
 }
 
 function Delete(index) {
-    let getLocalStorageData = localStorage.getItem("ListInfo");
-    listArray = JSON.parse(getLocalStorageData);
-    listArray.splice(index, 1);
-    localStorage.setItem("ListInfo", JSON.stringify(listArray));
-    Showdata()
+    let btn_delete = document.getElementsByClassName("btn-delete")[index];
+    if(btn_delete.classList.item(1))
+    {
+        Showdata();
+    }
+    else{  
+        let getLocalStorageData = localStorage.getItem("ListInfo");
+        listArray = JSON.parse(getLocalStorageData);
+        listArray.splice(index, 1);
+        localStorage.setItem("ListInfo", JSON.stringify(listArray));
+        Showdata()
+    }
 }
+
 
