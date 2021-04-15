@@ -102,7 +102,7 @@ function onclickSubmit(i) {
             document.getElementsByClassName("nameitems")[i].style['pointer-events'] = 'none';
         }
         localStorage.setItem("ListInfo", JSON.stringify(listArray));
-        Showdata();
+        Showdata(); 
         loadEventfilechange();
     }
 }
