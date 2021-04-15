@@ -8,7 +8,7 @@ let result_1 = document.getElementsByClassName("result-1");
 let result_2 = document.getElementsByClassName("result-2");
 let btn_choosefile = document.getElementsByClassName("btn-choosefile");
 let header = '<tr><th>#</th><th>Item Name</th><th>Category</th><th>image</th><th>Action</th></tr>'
-const regPattern = /^[^0-9][a-z0-9_ ]{0,8}$/i;
+const regPattern = /^[^0-9][^]{0,8}$/i;
 let str;
 
 Showdata();
@@ -21,7 +21,6 @@ function choosefilebtn(index) {
 
 // add event file change for every fileimg
 function loadEventfilechange() {
-
     for (let i = 0; i < fileimgs.length; i++) {
         fileimgs[i].addEventListener("change", () => {
             const filename = fileimgs[i].files[0];
@@ -58,15 +57,21 @@ function validateSelect(value, index) {
     return true;
 }
 
-function validateForm(index) {
+function validateImg(value, index)  {
+    console.log(value.src);
+    if(value.src == '') return false;
+    return true;
+}
 
-    if (validateName(nameitems[index].value, index) && validateSelect(categorys[index].value, index)) {
+function validateForm(index) {
+    if (validateName(nameitems[index].value, index) && validateSelect(categorys[index].value, index) && validateImg(imgs[index], index)) {
         return true;
     }
     else {
         validateSelect(categorys[index].value, index);
         return false;
     }
+    
 }
 /////////////
 
@@ -98,6 +103,7 @@ function onclickSubmit(i) {
         }
         localStorage.setItem("ListInfo", JSON.stringify(listArray));
         Showdata();
+        loadEventfilechange();
     }
 }
 

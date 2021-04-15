@@ -131,17 +131,17 @@ window.onload = function () {
         snows.push(new Snow());
     }
     setInterval(effect, 40);
-    setInterval(() => {
-        if(scrolling){
-            styleElement.appendChild(document.createTextNode("::-webkit-scrollbar-thumb {background: black;} ::-webkit-scrollbar {width: 7px;}"));
-            document.getElementsByTagName("head")[0].appendChild(styleElement);
-            scrolling = false;
-        }
-        else{
-            styleElement.appendChild(document.createTextNode("::-webkit-scrollbar-thumb {background: transparent;} ::-webkit-scrollbar {width: 0px;}"));
-            document.getElementsByTagName("head")[0].appendChild(styleElement);
-        }
-    }, 100);
+    // setInterval(() => {
+    //     if(scrolling){
+    //         styleElement.appendChild(document.createTextNode("::-webkit-scrollbar-thumb {background: black;} ::-webkit-scrollbar {width: 7px;}"));
+    //         document.getElementsByTagName("head")[0].appendChild(styleElement);
+    //         scrolling = false;
+    //     }
+    //     else{
+    //         styleElement.appendChild(document.createTextNode("::-webkit-scrollbar-thumb {background: transparent;} ::-webkit-scrollbar {width: 0px;}"));
+    //         document.getElementsByTagName("head")[0].appendChild(styleElement);
+    //     }
+    // }, 100);
 }
 
 $(document).ready(function () {
