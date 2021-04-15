@@ -142,7 +142,7 @@ function Showdata() {
         </td>  
         <td>
             <input type="button" onclick="choosefilebtn(${index + 1})" class="btn-choosefile" value="Choose file"></input>
-            <img class="img" src=${element.src} alt="">
+            <img class="img" src=${element.src} alt="" accept="image/x-png,image/jpeg">
             <input class="files" type="file" hidden>
         </td>
         <td>
