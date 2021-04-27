@@ -269,8 +269,6 @@ function filter(status) {
     }
 }
 
-
-
 // btncolor 
 $(".toggle-button").click(function(){
     $(".color-Ctr").toggleClass("active");
