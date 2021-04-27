@@ -174,28 +174,27 @@ function scrollProgress(){
         });
     }
 }
-let WidthPro = [0,0,0,0,0,0];
 let Cr = [0,0,0,0,0,0];
 let Percentage= [0,0,0,0,0,0];
 let i = 0;
 function creaseProgress(wid, elem) {
-    // let i;
     let j = i++;
-    let w = document.getElementsByClassName("level-bar")[0].clientWidth;
-    WidthPro[j] = (w*wid)/100;
-    
+    let w = document.getElementsByClassName("level-bar")[0].clientWidth;  
     
     setInterval(() => {
-        if(Cr[j] < WidthPro[j]) {
-            console.log(i  + ":  " + Cr[j]);
-            elem.style.width = ++Cr[j] + "px";
-            elem.querySelector("span").innerText = ++Percentage[j] + "%";
+        if(Cr[j] < wid) {
+            Cr[j] += 0.5;
+            elem.style.width = Cr[j] + "%";
+            if(Cr[j]%1 == 0)
+            {
+                elem.querySelector("span").innerText = ++Percentage[j] + "%";
+            }
         }else {
             //clearInterval(this);
         }
     },10);
 }
-
+//
 $(document).ready(function () {
     $('.owl-clients').owlCarousel({
         margin: 10,
