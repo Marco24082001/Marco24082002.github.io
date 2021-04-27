@@ -139,22 +139,22 @@ window.onscroll = function(e) {
 }
 
 function functscroll() {
-    // scrolling = true;
-    // styleElement.appendChild(document.createTextNode(".site-main::-webkit-scrollbar-thumb {background: black;} .site-main::-webkit-scrollbar {width: 7px;}"));
-    // document.getElementsByTagName("head")[0].appendChild(styleElement);
-    // setTimeout(() => {
-    //     if(scrolling == false) {
-    //     styleElement.appendChild(document.createTextNode(".site-main::-webkit-scrollbar-thumb {background: transparent;} .site-main::-webkit-scrollbar {width: 0px;}"));
-    //     document.getElementsByTagName("head")[0].appendChild(styleElement);
-    //     }
-    // },500);
-    // scrolling = false;
+    scrolling = true;
+    styleElement.appendChild(document.createTextNode(".site-main::-webkit-scrollbar-thumb {background: black;} .site-main::-webkit-scrollbar {width: 7px;}"));
+    document.getElementsByTagName("head")[0].appendChild(styleElement);
+    setTimeout(() => {
+        if(scrolling == false) {
+        styleElement.appendChild(document.createTextNode(".site-main::-webkit-scrollbar-thumb {background: transparent;} .site-main::-webkit-scrollbar {width: 0px;}"));
+        document.getElementsByTagName("head")[0].appendChild(styleElement);
+        }
+    },500);
+    scrolling = false;
 
-    // console.log("Vo Thanh Vi");
-    // console.log("Tran Thi Kim Oanh");
-    // setTimeout(() => {
-    //     console.log("OKe");
-    // },1000);
+    console.log("Vo Thanh Vi");
+    console.log("Tran Thi Kim Oanh");
+    setTimeout(() => {
+        console.log("OKe");
+    },1000);
     scrollProgress();
 };
 
@@ -176,7 +176,6 @@ function scrollProgress(){
 }
 
 function creaseProgress(wid, elem) {
-    
     let w = document.getElementsByClassName("level-bar")[0].clientWidth;  
     let Percentage  = 0;
     let Cr = 0;
