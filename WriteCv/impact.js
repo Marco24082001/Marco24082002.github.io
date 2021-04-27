@@ -174,25 +174,25 @@ function scrollProgress(){
         });
     }
 }
-let Cr = [0,0,0,0,0,0];
-let Percentage= [0,0,0,0,0,0];
-let i = 0;
+
 function creaseProgress(wid, elem) {
-    let j = i++;
-    let w = document.getElementsByClassName("level-bar")[0].clientWidth;  
     
-    setInterval(() => {
-        if(Cr[j] < wid) {
-            Cr[j] += 0.5;
-            elem.style.width = Cr[j] + "%";
-            if(Cr[j]%1 == 0)
+    let w = document.getElementsByClassName("level-bar")[0].clientWidth;  
+    let Percentage  = 0;
+    let Cr = 0;
+    let id = function() {
+        if(Cr < wid) {
+            Cr += 0.5;
+            elem.style.width = Cr + "%";
+            if(Cr%1 == 0)
             {
-                elem.querySelector("span").innerText = ++Percentage[j] + "%";
+                elem.querySelector("span").innerText = ++Percentage + "%";
             }
         }else {
-            //clearInterval(this);
+            clearInterval(id);
         }
-    },10);
+    }
+    setInterval(id,10);
 }
 //
 $(document).ready(function () {
