@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script src="https://kit.fontawesome.com/bb12d3ceff.js" crossorigin="anonymous"></script>
@@ -75,10 +75,16 @@
             </div>
         </div>
     </div>
-    <div class="header">
+
+    <div class="header-secondary">
+        <a href="#" class="togglemenu-btn"><i class="fas fa-bars"></i></a>
+        <h2>Philip Watson</h2>
+    </div>
+
+    <div class="header" id="myHeader">
         <div class="navbar">
             <div class="img-container">
-                <h1>Võ Thành Vĩ</h1>
+                <h1>Philip Watson</h1>
                 <img id="img-face" src="https://watson-vcard.netlify.app/img/profile-img.jpg" alt="">
             </div>
             <ul>
@@ -97,7 +103,7 @@
         <footer class="footer">
             <ul class="social">
                 <li>
-                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://www.facebook.com/thanhvi.vo.9081/"><i class="fab fa-facebook-square"></i></a>
                 </li>
                 <li>
                     <a href="#"><i class="fab fa-twitter-square"></i></a>
@@ -119,7 +125,7 @@
             </p>
         </footer>
     </div>
-    <div class="site-main">
+    <div class="site-main" onscroll="functscroll()">
         <section class="page home" id="page-home">
             <canvas id="field"></canvas>
             <div class="home-content">
@@ -521,8 +527,8 @@
                                 CORAL DRAW
                             </h4>
                             <span class="level-bar">
-                                <span class="wow progress">
-                                    <span class="progress-value">71%</span>
+                                <span class="progress" onclick="creaseProgress(91,this)">
+                                    <span class="progress-value">91%</span>
                                 </span>
                             </span>
                         </li>
@@ -531,8 +537,8 @@
                                 PHOTOSHOP
                             </h4>
                             <span class="level-bar">
-                                <span class="wow progress">
-                                    <span class="progress-value">71%</span>
+                                <span class="progress" onclick="creaseProgress(82,this)">
+                                    <span class="progress-value">82%</span>
                                 </span>
                             </span>
                         </li>
@@ -541,8 +547,8 @@
                                 ILLUSTRATOR
                             </h4>
                             <span class="level-bar">
-                                <span class="wow progress">
-                                    <span class="progress-value">71%</span>
+                                <span class="progress" onclick="creaseProgress(74,this)">
+                                    <span class="progress-value">74%</span>
                                 </span>
                             </span>
                         </li>
@@ -560,8 +566,8 @@
                                 HTML5
                             </h4>
                             <span class="level-bar">
-                                <span class="wow progress" >
-                                    <span class="progress-value" >71%</span>
+                                <span class="progress" onclick="creaseProgress(83,this)">
+                                    <span class="progress-value" >83%</span>
                                 </span>
                             </span>
                         </li>
@@ -570,8 +576,8 @@
                                 CSS3
                             </h4>
                             <span class="level-bar">
-                                <span class="wow progress" >
-                                    <span class="progress-value">71%</span>
+                                <span class="progress" onclick="creaseProgress(75,this)">
+                                    <span class="progress-value">75%</span>
                                 </span>
                             </span>
                         </li>
@@ -580,8 +586,8 @@
                                 JAVASCRIPT
                             </h4>
                             <span class="level-bar">
-                                <span class="wow progress">
-                                    <span class="progress-value">71%</span>
+                                <span class="progress" onclick="creaseProgress(92,this)">
+                                    <span class="progress-value">92%</span>
                                 </span>
                             </span>
                         </li>

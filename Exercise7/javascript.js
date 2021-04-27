@@ -8,6 +8,7 @@ let result_1 = document.getElementsByClassName("result-1");
 let result_2 = document.getElementsByClassName("result-2");
 let btn_choosefile = document.getElementsByClassName("btn-choosefile");
 let header = '<tr><th>#</th><th>Item Name</th><th>Category</th><th>image</th><th>Action</th></tr>'
+let PatternImg = ["image/png", "image/jpeg"];
 const regPattern = /^[^0-9][^]{0,8}$/i;
 let str;
 
@@ -23,8 +24,14 @@ function choosefilebtn(index) {
 function loadEventfilechange() {
     for (let i = 0; i < fileimgs.length; i++) {
         fileimgs[i].addEventListener("change", () => {
-            const filename = fileimgs[i].files[0];
-            if (filename) {
+            let checkimg = false;
+            let filename = fileimgs[i].files[0];
+            
+            PatternImg.forEach(i => {
+                if(i == filename.type) checkimg = true;
+            });
+            
+            if (filename && checkimg) {
                 const reader = new FileReader();
                 reader.onload = function () {
                     const result = reader.result;
@@ -41,6 +48,7 @@ function loadEventfilechange() {
 //validate data
 function validateName(value, index) {
     if (regPattern.test(value)) {
+        result_1[index].innerHTML = '';
         return true;
     }
     else {
@@ -54,7 +62,10 @@ function validateSelect(value, index) {
         result_2[index].innerHTML = 'Catogory is required';
         return false;
     }
-    return true;
+    else {
+        result_2[index].innerHTML = '';
+        return true;
+    }
 }
 
 function validateImg(value, index)  {

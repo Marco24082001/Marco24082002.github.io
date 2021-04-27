@@ -58,8 +58,25 @@ function effect() {
     drawSnows();
 }
 
-// typejs
+// onload
+window.onload = function () {
+    for (var i = 0; i < totalSnows; i++) {
+        snows.push(new Snow());
+    }
+    setInterval(effect, 40);
+}
 
+//display header
+document.getElementsByClassName("togglemenu-btn")[0].addEventListener("click", togglemenu);
+function togglemenu() {
+    let listClass = document.getElementById("myHeader").className.split(" ");
+    if(listClass.indexOf("changePosition") > -1){
+        listClass.splice(listClass.indexOf("changePosition"), 1);
+        document.getElementById("myHeader").className = listClass.join(" ");
+    }else {
+        document.getElementById("myHeader").className += " changePosition";
+    }
+}
 
 //hidden section
 document.getElementById("about-me").addEventListener("click", nextSection1);
@@ -117,31 +134,66 @@ function nextSection5() {
 var scrolling = false;
 var styleElement = document.createElement("style");
 
-
 window.onscroll = function(e) {
     scrolling = true;
 }
 
-//animation progress-bar
-// var bodyRect = document.
+function functscroll() {
+    // scrolling = true;
+    // styleElement.appendChild(document.createTextNode(".site-main::-webkit-scrollbar-thumb {background: black;} .site-main::-webkit-scrollbar {width: 7px;}"));
+    // document.getElementsByTagName("head")[0].appendChild(styleElement);
+    // setTimeout(() => {
+    //     if(scrolling == false) {
+    //     styleElement.appendChild(document.createTextNode(".site-main::-webkit-scrollbar-thumb {background: transparent;} .site-main::-webkit-scrollbar {width: 0px;}"));
+    //     document.getElementsByTagName("head")[0].appendChild(styleElement);
+    //     }
+    // },500);
+    // scrolling = false;
 
-// onload
-window.onload = function () {
-    for (var i = 0; i < totalSnows; i++) {
-        snows.push(new Snow());
+    // console.log("Vo Thanh Vi");
+    // console.log("Tran Thi Kim Oanh");
+    // setTimeout(() => {
+    //     console.log("OKe");
+    // },1000);
+    scrollProgress();
+};
+
+// check position of every progress
+let listArray = document.getElementsByClassName("progress");
+var elemgroup = Array.prototype.slice.call(listArray);
+
+function scrollProgress(){   
+    if(listArray[0].offsetTop != 0 && elemgroup)
+    {
+        elemgroup.forEach((element,index) => {
+            if(element.offsetTop <= (document.getElementsByClassName("site-main")[0].scrollTop + window.innerHeight))
+            {
+                element.click();
+                elemgroup.splice(index,1);   
+            }  
+        });
     }
-    setInterval(effect, 40);
-    // setInterval(() => {
-    //     if(scrolling){
-    //         styleElement.appendChild(document.createTextNode("::-webkit-scrollbar-thumb {background: black;} ::-webkit-scrollbar {width: 7px;}"));
-    //         document.getElementsByTagName("head")[0].appendChild(styleElement);
-    //         scrolling = false;
-    //     }
-    //     else{
-    //         styleElement.appendChild(document.createTextNode("::-webkit-scrollbar-thumb {background: transparent;} ::-webkit-scrollbar {width: 0px;}"));
-    //         document.getElementsByTagName("head")[0].appendChild(styleElement);
-    //     }
-    // }, 100);
+}
+let WidthPro = [0,0,0,0,0,0];
+let Cr = [0,0,0,0,0,0];
+let Percentage= [0,0,0,0,0,0];
+let i = 0;
+function creaseProgress(wid, elem) {
+    // let i;
+    let j = i++;
+    let w = document.getElementsByClassName("level-bar")[0].clientWidth;
+    WidthPro[j] = (w*wid)/100;
+    
+    
+    setInterval(() => {
+        if(Cr[j] < WidthPro[j]) {
+            console.log(i  + ":  " + Cr[j]);
+            elem.style.width = ++Cr[j] + "px";
+            elem.querySelector("span").innerText = ++Percentage[j] + "%";
+        }else {
+            //clearInterval(this);
+        }
+    },10);
 }
 
 $(document).ready(function () {
@@ -206,6 +258,7 @@ setActive("menu", "active-menu"); //set button menu
 // filter portfolio
 
 function filter(status) {
+    
     var x = document.getElementsByClassName("product");
     if(status == "all") status = "product";
     for(i = 0; i < x.length; i++)
@@ -218,16 +271,7 @@ function filter(status) {
     }
 }
 
-wow = new WOW(
-    {
-    boxClass:     'wow',      // default
-    animateClass: 'progress', // default
-    offset:       0,          // default
-    mobile:       true,       // default
-    live:         true        // default
-  }
-  )
-  wow.init();
+
 
 // btncolor 
 $(".toggle-button").click(function(){
