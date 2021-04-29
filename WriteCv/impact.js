@@ -170,7 +170,7 @@ function scrollProgress(){
                 elemgroup.splice(index,1);   
             }  
         });
-    }
+    }    
 } 
 
 function creaseProgress(wid, elem) {
