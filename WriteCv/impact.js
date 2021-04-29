@@ -167,7 +167,7 @@ function scrollProgress(){
             if(element.offsetTop <= (document.getElementsByClassName("site-main")[0].scrollTop + window.innerHeight))
             {
                 element.click();
-                elemgroup.splice(index,1);   
+                elemgroup.splice(index,1);     
             }  
         });
     }    
