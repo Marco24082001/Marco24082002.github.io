@@ -150,8 +150,6 @@ function functscroll() {
     },500);
     scrolling = false;
 
-    console.log("Vo Thanh Vi");
-    console.log("Tran Thi Kim Oanh");
     setTimeout(() => {
         console.log("OKe");
     },1000);
@@ -160,7 +158,7 @@ function functscroll() {
 
 // check position of every progress
 let listArray = document.getElementsByClassName("progress");
-var elemgroup = Array.prototype.slice.call(listArray);
+let elemgroup = Array.prototype.slice.call(listArray);
 
 function scrollProgress(){   
     if(listArray[0].offsetTop != 0 && elemgroup)
@@ -176,7 +174,6 @@ function scrollProgress(){
 }
 
 function creaseProgress(wid, elem) {
-    let w = document.getElementsByClassName("level-bar")[0].clientWidth;  
     let Percentage  = 0;
     let Cr = 0;
     let id = function() {
