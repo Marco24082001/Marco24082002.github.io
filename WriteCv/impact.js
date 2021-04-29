@@ -171,7 +171,7 @@ function scrollProgress(){
             }  
         });
     }
-}   
+} 
 
 function creaseProgress(wid, elem) {
     let Percentage  = 0;
