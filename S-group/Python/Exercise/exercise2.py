@@ -2,82 +2,82 @@ import math
 import requests
 import json
 
-# # 1. Bai Tuong
-# class DownloadCovidInfo:
-#     __url = ""
-#     def __init__(self, url = "https://api.covid19api.com/summary"):
-#         self.__url = url
+# 1. Bai Tuong
+class DownloadCovidInfo:
+    __url = ""
+    def __init__(self, url = "https://api.covid19api.com/summary"):
+        self.__url = url
 
-#     def get_all_data(self):
-#         try:
-#             response = requests.get(self.__url)
-#             response.raise_for_status()
-#             print(response.status_code)
-#         except requests.HTTPError as http_err:
-#             print(f'HTTP error occurred: {http_err}')
-#         except Exception as err:
-#             print(f'Other error occurred: {err}')
-#         else:
-#             print('Successfull Get Request')
-#             # response.content
-#             # response.text
-#             return response.json()
+    def get_all_data(self):
+        try:
+            response = requests.get(self.__url)
+            response.raise_for_status()
+            print(response.status_code)
+        except requests.HTTPError as http_err:
+            print(f'HTTP error occurred: {http_err}')
+        except Exception as err:
+            print(f'Other error occurred: {err}')
+        else:
+            print('Successfull Get Request')
+            # response.content
+            # response.text
+            return response.json()
             
-#     def get_data_by_country(self, Country):
-#         for country in self.get_all_data()['Countries']:
-#             if Country.lower() == country['Country'].lower():
-#                 return country
+    def get_data_by_country(self, Country):
+        for country in self.get_all_data()['Countries']:
+            if Country.lower() == country['Country'].lower():
+                return country
 
-#     def save_to_file(self, file):
-#         data = self.get_all_data()
-#         with open(''.join([file, '.json']), "w") as f:
-#             json.dump(data, f, indent=4)
+    def save_to_file(self, file):
+        data = self.get_all_data()
+        with open(''.join([file, '.json']), "w") as f:
+            json.dump(data, f, indent=4)
 
-#     @property
-#     def url(self):
-#         return self.__url
-#     @url.setter
-#     def url(self, url):
-#         self.__url = url
+    @property
+    def url(self):
+        return self.__url
+    @url.setter
+    def url(self, url):
+        self.__url = url
 
-# a = DownloadCovidInfo()
+a = DownloadCovidInfo()
 
-# print(a.url)
-# print(a.get_all_data())
-# print(a.get_data_by_country('viet nam'))
-# a.save_to_file("CovidData")
+print(a.url)
+print(a.get_all_data())
+print(a.get_data_by_country('viet nam'))
+a.save_to_file("CovidData")
 
-# # 2. Tính sum của các phần tử trong mảng
-# nums = [1, 2, 3, 4]
+# 2. Tính sum của các phần tử trong mảng
+nums = [1, 2, 3, 4]
 
-# def sum(nums):
-#     for i in range(len(nums)):
-#         if i != 0:
-#             nums[i] += nums[i-1]
-#     return nums
+def sum(nums):
+    for i in range(len(nums)):
+        if i != 0:
+            nums[i] += nums[i-1]
+    return nums
 
-# print(sum(nums))
+print(sum(nums))
 
 # 3. Super palindrome: 
-# def checkPalindrome(num):
-#     if str(num)[::-1] == str(num):
-#         return True
-#     return False
+def checkPalindrome(num):
+    if str(num)[::-1] == str(num):
+        return True
+    return False
 
 
-# def superPalindrome(left, right):
-#     for i in range(left, right+1):
-#         if math.sqrt(i) % 1 == 0:
-#             if checkPalindrome(num) and checkPalindrome(int(math.sqrt(i))):
-#                 nums.append(i)
-#                 print('sss')
+def superPalindrome(left, right):
+    for i in range(left, right+1):
+        if math.sqrt(i) % 1 == 0:
+            if checkPalindrome(num) and checkPalindrome(int(math.sqrt(i))):
+                nums.append(i)
+                print('sss')
 
-# left = int(input('Left : '))
-# right = int(input('Right : '))
+left = int(input('Left : '))
+right = int(input('Right : '))
 
-# nums = []
-# superPalindrome(left, right)
-# print(nums)
+nums = []
+superPalindrome(left, right)
+print(nums)
 
 # 4. Dùng class tạo cấu trúc dữ liệu danh sách liên kết đơn với value của mỗi node là giá trị số
 
