@@ -1,0 +1,25 @@
+extends ../layout/main.pug
+block content
+    form(action=`/articles/${article.id}?_method=PUT`, method="POST")
+        .form-group
+            label.form-label Title
+            input#title.form-control(
+                type='text' 
+                name='title' 
+                aria-describedby='emailHelp'
+                value=article.title
+                read-only=true
+            )
+            #emailHelp.form-text We&apos;ll never share your email with anyone else.
+        br
+        .form-group
+            label Content
+            textarea#content.form-control(rows='10' name='content')
+                #{article.content}
+        br
+        button.btn.btn-primary(type='submit') Update
+
+
+
+block scripts
+    script(src='/js/article.js')

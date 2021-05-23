@@ -1,0 +1,8 @@
+extends ../layout/main.pug
+
+block content 
+    article 
+        h2=article.title
+        img.image(src=article.image , alt="", style = {float: 'left', width : '200px'})
+        p.content=article.content
+        a.btn.btn-primary.article-update(href=`/articles/${article.id}/update`) Update

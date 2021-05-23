@@ -1,0 +1,13 @@
+extends ../layout/main.pug
+
+block content 
+    form(action="/create", method ="POST")
+        .form-group
+            label(for='title') Title
+            input#title.form-control(type='text', aria-describedby='titlearticle', placeholder='Enter title', name='title')
+        br
+        .form-group
+            label(for='content') Content
+            textarea#content.form-control(rows = '5', placeholder='Enter content', name='content')
+        br
+        button.btn.btn-primary(type='submit') Submit

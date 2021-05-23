@@ -1,0 +1,12 @@
+extends ../layout/main.pug
+
+block content
+    h3 Nổi bật hôm nay
+    each article in articles
+        article 
+            .row(style = {margin : '20px'})
+                .col-sm-4 
+                    img(height = "270px", src=article.image)
+                .col-sm-8
+                    h3=article.title 
+                    a.btn.btn-primary.article-link(href='/articles/' + article.id) See more
