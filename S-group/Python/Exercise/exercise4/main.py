@@ -25,12 +25,11 @@ class SpeechTotext:
                 print("API was unreachable or unresponsive")
                 print("\"ENTER\" to speak again")
                 keyboard.wait("\n")
-                self.recognizer = sr.Recognizer()
             except sr.UnknownValueError:
                 print("speech was unintelligible")
                 print("\"ENTER\" to speak again")
                 keyboard.wait("\n")
-                self.recognizer = sr.Recognizer()
+            self.recognizer = sr.Recognizer()
 
 class TextToSpeech:
     def __init__(self):
@@ -59,7 +58,7 @@ class Chatbot:
                 self.speech.Listen()
                 print(f"\033[95mYou: {self.speech.message}")
                 payload = "{\n\t\"utext\": \"" + self.speech.message + "\", \n\t\"lang\": \"vi\" \n}"
-                response = requests.post(self.url, data=payload.encode(), headers=self.headers)
+                response = requests.post(self.url, data=payload, headers=self.headers)
                 response = json.loads(response.text)
                 print(f"\033[91mSimi : {response['atext']}")
                 self.read.Read(response['atext'])
