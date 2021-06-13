@@ -1,5 +1,5 @@
 # ChatBot-Simsimi
-    - Download
+    - Clone
     - create venv & activate
-    - run script: pip install -r setup.txt
+    - pip install -r setup.txt
     - python main.py
