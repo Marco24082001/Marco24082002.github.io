@@ -29,5 +29,3 @@ class SpeechToText:
                 print("\"ENTER\" to speak again")
                 keyboard.wait("\n")
             self.recognizer = sr.Recognizer()
-
-x = 'Vo thah vi'
