@@ -5,8 +5,6 @@ def crop_Plate(img):
     imgray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     ret, thresh = cv2.threshold(imgray, 125, 255, cv2.THRESH_BINARY_INV)
     contours, hierarchy = cv2.findContours(image=thresh, mode=cv2.RETR_TREE, method=cv2.CHAIN_APPROX_SIMPLE)                                    
-    cv2.drawContours(image=imgray, contours=contours, contourIdx=-1, color=(0, 255, 0), thickness=3, lineType=cv2.LINE_AA)
-
     listcons = []
     for cnt in contours:
         listcons.append(cv2.contourArea(cnt))
@@ -26,10 +24,10 @@ def crop_Number(img):
     num = 0
     for contour in contours:
         area =cv2.contourArea(contour)
-        if area <= 3500 and area >= 900:
+        if area <= 4000 and area >= 900:
             x,y,w,h = cv2.boundingRect(contour)
             number = img[y:y+h, x:x+w]
-            img=cv2.rectangle(img, (x,y), (x+w,y+h), (0,0,255), 2)
+            img=cv2.rectangle(img, (x,y), (x+w,y+h), (0,255,0), 2)
             cv2.imwrite('./number/Num_{}.png'.format(num), number)
             num += 1
 
@@ -39,3 +37,5 @@ crop_Number(crop_plate)
 cv2.imshow('crop', crop_plate)
 cv2.imwrite('./number/crop.png',crop_plate)
 cv2.waitKey(5000)
+
+
