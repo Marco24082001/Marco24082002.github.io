@@ -8,7 +8,7 @@ file_path = "./dataset/csv/khoa_hoc.csv"
 # vectorize sentences
 
 # wordDicts = []
-
+idfDict = {}
 def set_wordDicts(docList):
     global wordDicts
     for sen in ld.SENTENCE_LIST:
@@ -28,17 +28,17 @@ def computeTF(wordDict, words):
     return tfDict
 
 def computeIDF(wordDict, docList):
-    idfDict = {}
-    N = len(docList)
-    
-    idfDict = dict.fromkeys(ld.WORD_SET, 0)
-    for doc in docList:
-        words = set(doc.split(' '))
-        for word in ld.WORD_SET:
-            if word in words:
-                idfDict[word] += 1
-    for word, val in idfDict.items():
-            idfDict[word] = math.log10(N / float(val))
+    global idfDict
+    if not idfDict:
+        N = len(docList)
+        idfDict = dict.fromkeys(ld.WORD_SET, 0)
+        for doc in docList:
+            words = set(doc.split(' '))
+            for word in ld.WORD_SET:
+                if word in words:
+                    idfDict[word] += 1
+        for word, val in idfDict.items():
+                idfDict[word] = math.log10(N / float(val))
     return idfDict
 
 def computeTFIDF(tfDocs, idfs):
@@ -59,7 +59,12 @@ if __name__ == '__main__':
     df = pd.read_csv(file_path)
     data = df.values[:, 1]
     data = ld.preprocess_dataframe(data)
-    tfidfDocA = vectorize_sen(ld.SENTENCE_LIST[0], ld.SENTENCE_LIST)
-    df = pd.DataFrame([tfidfDocA])
+    # tfidfDocA = vectorize_sen(ld.SENTENCE_LIST[0], ld.SENTENCE_LIST)
+    # df = pd.DataFrame([tfidfDocA])
+    # print(df)
+    vectorize = []
+    for i in range(10):
+        vectorize.append(vectorize_sen(ld.SENTENCE_LIST[i], ld.SENTENCE_LIST))
+    df = pd.DataFrame(vectorize)
     print(df)
     
